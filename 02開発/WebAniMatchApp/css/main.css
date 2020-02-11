@@ -1,0 +1,56 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    font-family: fantasy;
+    font-size: 80%;
+}
+
+header {
+    
+}
+
+main {
+    background-color:#EEEEEE;  
+}
+
+footer {
+    background-color:#FFFF00;
+}
+
+img {
+    border: 0;
+}
+
+.jumbotron {
+    height: 500px;
+    background-image: url("../img/main/service_img.jpg");
+    background-size: cover;
+    background-position: center 80%;
+}
+
+.rp-btn-search {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.rp-btn-message {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.rp-main-owner-img {
+    width:50%;
+    height:300px;
+}
+
+.rp-main-trimmer-img {
+    width:50%;
+    height:300px;
+}
