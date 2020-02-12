@@ -12,16 +12,12 @@ body {
     font-size: 80%;
 }
 
-header {
-    
-}
-
 main {
     background-color:#EEEEEE;  
 }
 
 footer {
-    background-color:#FFFF00;
+    background-color:#FFFF99;
 }
 
 img {
@@ -35,14 +31,16 @@ img {
     background-position: center 80%;
 }
 
-.rp-btn-search {
-    margin-top: 20px;
-    margin-bottom: 10px;
+.rp-main-top {
+    text-align: center;
 }
 
-.rp-btn-message {
-    margin-top: 10px;
-    margin-bottom: 20px;
+.rp-main-btn-search {
+    border-radius: 10%;
+}
+
+.rp-main-btn-message {
+    border-radius: 10%;
 }
 
 .rp-main-owner-img {
