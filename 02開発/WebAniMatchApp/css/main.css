@@ -16,14 +16,6 @@ main {
     background-color:#EEEEEE;  
 }
 
-footer {
-    background-color:#FFFF99;
-}
-
-img {
-    border: 0;
-}
-
 .jumbotron {
     height: 500px;
     background-image: url("../img/main/service_img.jpg");
@@ -31,24 +23,39 @@ img {
     background-position: center 80%;
 }
 
-.rp-main-top {
+.main-top {
     text-align: center;
 }
 
-.rp-main-btn-search {
-    border-radius: 10%;
+.main-section-block {
+    width:auto;
+    margin:70px auto;
+    background-color:#FFFFFF; 
 }
 
-.rp-main-btn-message {
-    border-radius: 10%;
-}
-
-.rp-main-owner-img {
-    width:50%;
+.main-section-block.top {
     height:300px;
+    box-sizing: border-box;
 }
 
-.rp-main-trimmer-img {
-    width:50%;
-    height:300px;
+.main-section-block.bottom {
+
+    height:330px;
+    box-sizing: border-box;
+}
+
+.main-btn-search {
+    border-radius: 20%;
+}
+
+.main-btn-message {
+    border-radius: 20%;
+}
+
+footer {
+    background-color:#FFFF99;
+}
+
+img {
+    border: 0;
 }
