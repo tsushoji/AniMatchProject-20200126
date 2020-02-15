@@ -4,58 +4,91 @@
 }
 
 html {
-    overflow-y: scroll;
+    overflow-y:scroll;
 }
 
 body {
-    font-family: fantasy;
-    font-size: 80%;
-}
-
-main {
-    background-color:#EEEEEE;  
-}
-
-.jumbotron {
-    height: 500px;
-    background-image: url("../img/main/service_img.jpg");
-    background-size: cover;
-    background-position: center 80%;
-}
-
-.main-top {
-    text-align: center;
-}
-
-.main-section-block {
-    width:auto;
-    margin:70px auto;
-    background-color:#FFFFFF; 
-}
-
-.main-section-block.top {
-    height:300px;
-    box-sizing: border-box;
-}
-
-.main-section-block.bottom {
-
-    height:330px;
-    box-sizing: border-box;
-}
-
-.main-btn-search {
-    border-radius: 20%;
-}
-
-.main-btn-message {
-    border-radius: 20%;
-}
-
-footer {
-    background-color:#FFFF99;
+    font-family:fantasy;
+    font-size:80%;
+    color:#000000;
 }
 
 img {
     border: 0;
 }
+
+a {
+    color:#000000;
+    text-decoration:none;
+}
+
+a:hover{
+   color:#FFFF00;
+   text-decoration:none;
+}
+
+main {
+    background-color:rgb(255, 255, 128);  
+}
+
+div.jumbotron {
+    height: 500px;
+    background-image:url("../img/main/service_img.jpg");
+    background-size:cover;
+    background-position:center 100%;
+    margin-bottom:0;
+}
+
+div.main-top {
+    text-align:center;
+}
+
+div.main-section-block {
+    width:auto;
+    margin:70px auto;
+    background-color:rgb(248, 249, 250);
+}
+
+div.main-section-header {
+    min-height:60px;
+}
+
+div.main-section-header .main-section-header-content{
+    text-align:center;
+}
+
+div.main-section-btn {
+    min-height:60px;
+    text-align:center;
+}
+
+div.main-btn-message {
+    border-radius:20%;
+    text-align:center;
+}
+
+footer {
+    background-color:rgb(248, 249, 250);
+}
+div.footer-top-link {
+    min-height:30px;
+}
+
+div.footer-main-flex {
+    margin-right:10%;
+    margin-left:10%;
+    padding-right:10%;
+    padding-left:10%;
+    min-height:180px;
+}
+
+div.footer-main-flex ul {
+    list-style:none;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+div.footer-main-flex ul>li{
+    margin-bottom:5px;
+}
+
