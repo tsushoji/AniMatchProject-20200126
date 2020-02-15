@@ -10,7 +10,12 @@ html {
 body {
     font-family:fantasy;
     font-size:80%;
-    color:#000000;
+    color:rgb(0, 0, 0);
+}
+
+.row {
+    margin-right:0;
+    margin-left:0;
 }
 
 img {
@@ -18,17 +23,17 @@ img {
 }
 
 a {
-    color:#000000;
+    color:rgb(0, 0, 0);
     text-decoration:none;
 }
 
 a:hover{
-   color:#FFFF00;
+   color:rgb(0, 0, 0);
    text-decoration:none;
 }
 
 main {
-    background-color:rgb(255, 255, 128);  
+    background-color:rgb(255, 255, 255);  
 }
 
 div.jumbotron {
@@ -40,13 +45,24 @@ div.jumbotron {
 }
 
 div.main-top {
+    margin-top:50px;
     text-align:center;
 }
 
+div.main-section-block h3 span {
+    background:linear-gradient(transparent 50%, yellow 50%);
+}
+
 div.main-section-block {
-    width:auto;
-    margin:70px auto;
-    background-color:rgb(248, 249, 250);
+    width:100%;
+    margin-top:50px;
+    margin-bottom:50px;
+    margin-left:auto;
+    margin-right:auto;
+    min-height:200px;
+    background-color:rgb(255, 255, 200);
+    border-radius:10%;
+    border:medium solid rgb(0, 0, 0);
 }
 
 div.main-section-header {
@@ -57,18 +73,17 @@ div.main-section-header .main-section-header-content{
     text-align:center;
 }
 
-div.main-section-btn {
-    min-height:60px;
-    text-align:center;
+div.main-section-explation {
+    min-height:200px;
 }
 
-div.main-btn-message {
-    border-radius:20%;
-    text-align:center;
+div.main-section-btn {
+    min-height:50px;
+    text-align:center;   
 }
 
 footer {
-    background-color:rgb(248, 249, 250);
+    background-color:rgb(255, 255, 200);;
 }
 div.footer-top-link {
     min-height:30px;
@@ -82,13 +97,16 @@ div.footer-main-flex {
     min-height:180px;
 }
 
+div.flex-item>h5 {
+    text-decoration:underline;
+}
+
 div.footer-main-flex ul {
     list-style:none;
-    margin-top:10px;
-    margin-bottom:10px;
+    margin-top:20px;
 }
 
 div.footer-main-flex ul>li{
-    margin-bottom:5px;
+    margin-bottom:10px;
 }
 
