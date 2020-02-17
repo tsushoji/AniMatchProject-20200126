@@ -37,11 +37,33 @@ main {
 }
 
 div.jumbotron {
-    height: 500px;
-    background-image:url("../img/main/service_img.jpg");
+    height: 650px;
+    background-image:url("../img/main/banner.jpg");
     background-size:cover;
-    background-position:center 100%;
+    background-position:center 50%;
     margin-bottom:0;
+}
+
+div.jumbotron>.jumbotron-content {
+    position:relative;
+    top:325px;
+}
+
+div.jumbotron h1 {
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:0;
+    color:rgb(255, 255, 100);
+}
+
+div.jumbotron h1 .jumbotron-content-emphasis {
+    height:40%;
+    width:40%;
+}
+
+div.jumbotron h1 .jumbotron-content-supporting {
+    position:absolute;
+    bottom:0;
 }
 
 div.main-top {
@@ -75,6 +97,19 @@ div.main-section-header .main-section-header-content{
 
 div.main-section-explation {
     min-height:200px;
+}
+
+div.main-section-explation .section-supporting-img {
+    width:auto;
+    height:auto;
+    min-width:100%;
+    max-height:180px;
+    background-color:rgb(255, 255, 200);
+}
+
+div.main-section-explation .main-section-explation-content {
+    font-size:180%;
+    vertical-align: middle;
 }
 
 div.main-section-btn {
