@@ -2,11 +2,14 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <!-- ビューポートの設定 -->
+	<meta name="viewport" content="width=device-width,initial-scale=1">
     <title>AniMatch</title>
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="css/main.css" />
     <script src="js/bootstrap/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 </head>
 <body>
     <!--ヘッダー-->
@@ -31,7 +34,7 @@
     <main>
         <div class="jumbotron">
             <div class="container jumbotron-content">
-                <h1><img class="jumbotron-content-emphasis" src="img/rogo/animatch.png" alt="Animatchロゴ"><span class="jumbotron-content-supporting">で飼い主とトリマーを繋ごう&excl;&excl;</span></h1>
+                <h1 class="jumbotron-content-header"><img class="jumbotron-content-emphasis" src="img/rogo/animatch.png" alt="Animatchロゴ"><span class="jumbotron-content-supporting">で飼い主とトリマーを繋ごう&excl;&excl;</span></h1>
             </div>
         </div>
         <div class="container">
@@ -42,59 +45,55 @@
                         <h2>お店専用</h3>
                     </div>
                     <div class="main-section-block">
-                        <section>
-                            <a href="search.html">
-                                <div class="row main-section-header">
-                                    <div class="col-12">
-                                        <h3 class="main-section-header-content">
-                                            &lt;&nbsp;&lt;&nbsp;<span>ペット検索</span>&nbsp;&gt;&nbsp;&gt;
-                                        </h3>
-                                    </div>   
+                        <section class="main-section-content-search">
+                            <div class="row main-section-header">
+                                <div class="col-12">
+                                    <h3 class="main-section-header-content">
+                                        &lt;&lt;ペット検索&gt;&gt;
+                                    </h3>
+                                </div>   
+                            </div>
+                            <div class="row main-section-explation">
+                                <div class="col-6">
+                                    <figure>
+                                        <img class="section-supporting-img" src="img/main/section-pets-search.png" alt="飼い主検索補足画像">
+                                    </figure>
                                 </div>
-                                <div class="row main-section-explation">
-                                    <div class="col-6">
-                                        <figure>
-                                            <img class="section-supporting-img" src="img/main/section-pets-search.png" alt="飼い主検索補足画像">
-                                        </figure>
-                                    </div>
-                                    <div class="col-6">
-                                        <p class="main-section-explation-content">身近にあなたを必要としているペットを探してみましょう&excl;</p>
-                                    </div>
+                                <div class="col-6">
+                                    <p class="main-section-explation-content">身近にあなたを必要としているペットを探してみましょう&excl;</p>
                                 </div>
-                                <div class="row main-section-btn">
-                                    <div class="col-12">
-                                        <a class="btn btn-primary btn-sm" href="search.html" role="button">飼い主を探す<img src="img/icon/search.png" alt="検索アイコン"></a>
-                                    </div>
+                            </div>
+                            <div class="row main-section-btn">
+                                <div class="col-12">
+                                    <a class="btn btn-primary btn-sm" href="search.html" role="button">飼い主を探す<img src="img/icon/search.png" alt="検索アイコン"></a>
                                 </div>
-                            </a>
+                            </div>
                         </section>
                     </div>
                     <div class="main-section-block">
-                        <section>
-                            <a href="dmessage.html">
-                                <div class="row main-section-header">
-                                    <div class="col-12">
-                                        <h3 class="main-section-header-content">
-                                            &lt;&nbsp;&lt;&nbsp;<span>飼い主へメッセージ</span>&nbsp;&gt;&nbsp;&gt;
-                                        </h3>
-                                    </div> 
+                        <section class="main-section-content-message">
+                            <div class="row main-section-header">
+                                <div class="col-12">
+                                    <h3 class="main-section-header-content">
+                                        &lt;&lt;飼い主へメッセージ&gt;&gt;
+                                    </h3>
+                                </div> 
+                            </div>
+                            <div class="row main-section-explation">
+                                <div class="col-6">
+                                    <figure>
+                                        <img class="section-supporting-img" src="img/main/section-trimmer-message.png" alt="飼い主へダイレクトメッセージ補足画像">
+                                    </figure>
                                 </div>
-                                <div class="row main-section-explation">
-                                    <div class="col-6">
-                                        <figure>
-                                            <img class="section-supporting-img" src="img/main/section-trimmer-message.png" alt="飼い主へダイレクトメッセージ補足画像">
-                                        </figure>
-                                    </div>
-                                    <div class="col-6">
-                                        <p class="main-section-explation-content">実際にトリミングしたいペットの飼い主と連絡をとり、マッチングしてみましょう&excl;</p>
-                                    </div>
+                                <div class="col-6">
+                                    <p class="main-section-explation-content">実際にトリミングしたいペットの飼い主と連絡をとり、マッチングしてみましょう&excl;</p>
                                 </div>
-                                <div class="row main-section-btn">
-                                    <div class="col-12">
-                                        <a class="btn btn-primary btn-sm" href="dmessage.html" role="button">ダイレクトメッセージ<img src="img/icon/direct_message.png" alt="ダイレクトメッセージアイコン"></a>
-                                    </div>
+                            </div>
+                            <div class="row main-section-btn">
+                                <div class="col-12">
+                                    <a class="btn btn-primary btn-sm" href="dmessage.html" role="button">ダイレクトメッセージ<img src="img/icon/direct_message.png" alt="ダイレクトメッセージアイコン"></a>
                                 </div>
-                            </a>
+                            </div>
                         </section>
                     </div>
                 </div>    
@@ -104,59 +103,55 @@
                         <h2>飼い主専用</h3>   
                     </div>
                     <div class="main-section-block">
-                        <section>
-                            <a href="search.html">
-                                <div class="row main-section-header">
-                                    <div class="col-12">
-                                        <h3 class="main-section-header-content">
-                                            &lt;&nbsp;&lt;&nbsp;<span>お店検索</span>&nbsp;&gt;&nbsp;&gt;
-                                        </h3>
-                                    </div>
+                        <section class="main-section-content-search">
+                            <div class="row main-section-header">
+                                <div class="col-12">
+                                    <h3 class="main-section-header-content">
+                                        &lt;&lt;お店検索&gt;&gt;
+                                    </h3>
                                 </div>
-                                <div class="row main-section-explation">
-                                    <div class="col-6">
-                                        <figure>
-                                            <img class="section-supporting-img" src="img/main/section-trimmer-search.png" alt="お店検索補足画像">
-                                        </figure>
-                                    </div>
-                                    <div class="col-6">
-                                        <p class="main-section-explation-content">身近にあなたの役に立ちたいと思っているトリマーのお店を探してみましょう&excl;</p>
-                                    </div>
+                            </div>
+                            <div class="row main-section-explation">
+                                <div class="col-6">
+                                    <figure>
+                                        <img class="section-supporting-img" src="img/main/section-trimmer-search.png" alt="お店検索補足画像">
+                                    </figure>
                                 </div>
-                                <div class="row main-section-btn">
-                                    <div class="col-12">
-                                        <a class="btn btn-primary btn-sm" href="search.html" role="button">お店を探す<img src="img/icon/search.png" alt="検索アイコン"></a>
-                                    </div>
+                                <div class="col-6">
+                                    <p class="main-section-explation-content">身近にあなたの役に立ちたいと思っているトリマーのお店を探してみましょう&excl;</p>
                                 </div>
-                            </a>
+                            </div>
+                            <div class="row main-section-btn">
+                                <div class="col-12">
+                                    <a class="btn btn-primary btn-sm" href="search.html" role="button">お店を探す<img src="img/icon/search.png" alt="検索アイコン"></a>
+                                </div>
+                            </div>
                         </section>
                     </div>
                     <div class="main-section-block">
-                        <section>
-                            <a href="dmessage.html">
-                                <div class="row main-section-header">
-                                    <div class="col-12">
-                                        <h3 class="main-section-header-content">
-                                            &lt;&nbsp;&lt;&nbsp;<span>お店へメッセージ</span>&nbsp;&gt;&nbsp;&gt;
-                                        </h3>
-                                    </div>
+                        <section class="main-section-content-message">
+                            <div class="row main-section-header">
+                                <div class="col-12">
+                                    <h3 class="main-section-header-content">
+                                        &lt;&lt;お店へメッセージ&gt;&gt;
+                                    </h3>
                                 </div>
-                                <div class="row main-section-explation">
-                                    <div class="col-6">
-                                        <figure>
-                                            <img class="section-supporting-img" src="img/main/section-owner-message.png" alt="お店へダイレクトメッセージ補足画像">
-                                        </figure>
-                                    </div>
-                                    <div class="col-6">
-                                        <p class="main-section-explation-content">実際にトリミングしてほしいお店と連絡をとり、マッチングしてみましょう&excl;</p>
-                                    </div>
+                            </div>
+                            <div class="row main-section-explation">
+                                <div class="col-6">
+                                    <figure>
+                                        <img class="section-supporting-img" src="img/main/section-owner-message.png" alt="お店へダイレクトメッセージ補足画像">
+                                    </figure>
                                 </div>
-                                <div class="row">
-                                    <div class="col-12 main-section-btn">
-                                        <a class="btn btn-primary btn-sm" href="dmessage.html" role="button">ダイレクトメッセージ<img src="img/icon/direct_message.png" alt="ダイレクトメッセージアイコン"></a>
-                                    </div>
+                                <div class="col-6">
+                                    <p class="main-section-explation-content">実際にトリミングしてほしいお店と連絡をとり、マッチングしてみましょう&excl;</p>
                                 </div>
-                            </a>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 main-section-btn">
+                                    <a class="btn btn-primary btn-sm" href="dmessage.html" role="button">ダイレクトメッセージ<img src="img/icon/direct_message.png" alt="ダイレクトメッセージアイコン"></a>
+                                </div>
+                            </div>
                         </section>
                     </div>
                 </div>
@@ -172,32 +167,32 @@
         </div>
         <div class="d-flex justify-content-between footer-main-flex">
             <div class="flex-item">
-                <h5>メインメニュー</h5>
-                <ul>
-                    <li><a href="#">トップページ</a></li>
-                    <li><a href="regist.html">新規会員登録</a></li>
-                    <li><a href="login.html">ログイン</a></li>
+                <h5 class="item-header">メインメニュー</h5>
+                <ul class="item-content">
+                    <li class="item-content-element"><a href="#">トップページ</a></li>
+                    <li class="item-content-element"><a href="regist.html">新規会員登録</a></li>
+                    <li class="item-content-element"><a href="login.html">ログイン</a></li>
                 </ul>
             </div>
             <div class="flex-item">
-                <h5>お店専用メニュー</h5>
-                <ul>
-                    <li><a href="search.html">飼い主を探す</a></li>
-                    <li><a href="dmessage.html">飼い主へダイレクトメッセージ</a></li>
+                <h5 class="item-header">お店専用メニュー</h5>
+                <ul class="item-content">
+                    <li class="item-content-element"><a href="search.html">飼い主を探す</a></li>
+                    <li class="item-content-element"><a href="dmessage.html">飼い主へダイレクトメッセージ</a></li>
                 </ul>
             </div>
             <div class="flex-item">
-                <h5>飼い主専用メニュー</h5>
-                <ul>
-                    <li><a href="search.html">お店を探す</a></li>
-                    <li><a href="dmessage.html">お店へダイレクトメッセージ</a></li>
+                <h5 class="item-header">飼い主専用メニュー</h5>
+                <ul class="item-content">
+                    <li class="item-content-element"><a href="search.html">お店を探す</a></li>
+                    <li class="item-content-element"><a href="dmessage.html">お店へダイレクトメッセージ</a></li>
                 </ul>
             </div>
             <div class="flex-item">
-                <h5>その他</h5>
-                <ul>
-                    <li><a href="search.html">問い合わせ</a></li>
-                    <li><a href="dmessage.html">動物の記事</a></li>
+                <h5 class="item-header">その他</h5>
+                <ul class="item-content">
+                    <li class="item-content-element"><a href="search.html">問い合わせ</a></li>
+                    <li class="item-content-element"><a href="dmessage.html">動物の記事</a></li>
                 </ul>
             </div>
         </div>   
