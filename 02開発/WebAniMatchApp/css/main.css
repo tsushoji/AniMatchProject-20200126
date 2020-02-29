@@ -1,3 +1,4 @@
+/* 全体 */
 html {
     overflow-y:scroll;
 }
@@ -14,7 +15,7 @@ body {
 }
 
 img {
-    border: 0;
+    border:0;
 }
 
 a {
@@ -22,8 +23,10 @@ a {
     text-decoration:none;
 }
 
+
+/* メイン */
 .main-section-content-search,.main-section-content-message:hover {
-   cursor:pointer;
+    cursor:pointer;
 }
 
 main {
@@ -36,15 +39,6 @@ main {
     background-size:cover;
     background-position:center 50%;
     margin-bottom:0;
-}
-
-.jumbotron-content {
-    color:rgb(255, 255, 100);
-    position:absolute;
-    top:60%;
-    left:25%;
-    font-size:30px;
-    width:80%;
 }
 
 .jumbotron-content-message-img {
@@ -78,6 +72,8 @@ main {
     font-size:180%;
 }
 
+
+/* フッター */
 footer {
     background-color:rgb(255, 255, 200);
 }
@@ -86,3 +82,26 @@ footer {
     min-height:30px;
 }
 
+
+/*　画面サイズが767pxまではここを読み込む　*/
+@media screen and (max-width:767px) {
+    /* ヘッダー */
+    .collapse-item {
+        text-align:right;
+    }
+
+    .collapse-item-btn-search {
+        margin-bottom:5px
+    }
+
+    .collapse-item-btn-search {
+        margin-top:5px;
+        margin-bottom:10px;
+    }
+
+
+    /* メイン */
+    .jumbotron {
+        height:420px;
+    }
+}
