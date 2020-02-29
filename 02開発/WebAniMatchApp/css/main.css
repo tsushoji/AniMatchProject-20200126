@@ -38,14 +38,14 @@ main {
     margin-bottom:0;
 }
 
-.jumbotron-content {
+/* .jumbotron-content {
     color:rgb(255, 255, 100);
     position:absolute;
     top:60%;
     left:25%;
     font-size:30px;
     width:80%;
-}
+} */
 
 .jumbotron-content-message-img {
     zoom:2;
@@ -86,3 +86,18 @@ footer {
     min-height:30px;
 }
 
+@media screen and (max-width:767px) {
+    /*　画面サイズが767pxまではここを読み込む　*/
+    .collapse-item {
+        text-align:right;
+    }
+
+    .collapse-item-btn-search {
+        margin-bottom:5px
+    }
+
+    .collapse-item-btn-search {
+        margin-top:5px;
+        margin-bottom:10px;
+    }
+}

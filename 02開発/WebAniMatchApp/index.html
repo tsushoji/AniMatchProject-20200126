@@ -33,13 +33,16 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbar-supported-content">
+            <div class="collapse navbar-collapse collapse-item" id="navbar-supported-content">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item"><a class="nav-link" href="search.html">お店を探す<img src="img/icon/search.png" alt="検索アイコン"></a></li>
                     <li class="nav-item"><a class="nav-link" href="search.html">飼い主を探す<img src="img/icon/search.png" alt="検索アイコン"></a></li>
                 </ul>
-                <button class="btn btn-outline-info my-2 my-sm-0 mr-2 is-show--regist" type="submit">新規会員登録</button>
-                <button class="btn btn-outline-success my-2 my-sm-0 ml-2 is-show--login" type="submit">ログイン</button>
+
+                <ul class="navbar-nav">
+                    <li class="nav-item ml-auto mr-md-3 collapse-item-btn-search"><a class="nav-link btn btn-outline-info" type="submit" href="search.html">新規会員登録</a></li>
+                    <li class="nav-item ml-auto mr-md-2 collapse-item-btn-login"><a class="nav-link btn btn-outline-success" type="submit" href="login.html">ログイン</a></li>
+                </ul>
             </div> 
 
         </nav>
@@ -49,10 +52,10 @@
     <!--メイン-->
     <main>
         <div class="jumbotron">
-            <div class="container jumbotron-content">
+            <!-- <div class="container jumbotron-content">
                 <img class="jumbotron-content-message-img" src="img/rogo/animatch.png" alt="Animatchロゴ">
                 <span class="jumbotron-content-message-writing">で飼い主とトリマーを繋ごう&excl;&excl;</span>
-            </div>
+            </div> -->
         </div>
 
         <div class="container">
@@ -82,7 +85,7 @@
                                         <img class="main-center-explation-img-content" src="img/main/section-pets-search.png" alt="飼い主検索補足画像">
                                     </figure>
                                 </div>
-                                <div class="col-md p-0">
+                                <div class="col-lg p-0">
                                     <p class="main-center-explation-content">身近にあなたを必要としているペットを探してみましょう&excl;</p>
                                 </div>
                             </div>
@@ -107,12 +110,12 @@
                             </div>
                             <div class="row">
                                 <div class="col-md p-0">
-                                    <figure class="col-md p-0 text-center">
+                                    <figure class="col-lg p-0 text-center">
                                         <img class="main-center-explation-img-content" src="img/main/section-trimmer-message.png" alt="飼い主へダイレクトメッセージ補足画像">
                                     </figure>
                                 </div>
-                                <div class="col-md p-0">
-                                    <p class="main-center-explation-content">実際にトリミングしたいペットの飼い主と連絡をとり、マッチングしてみましょう&excl;</p>
+                                <div class="col-lg p-0">
+                                    <p class="main-center-explation-content">実際にトリミングしたいペットの飼い主と連絡して、マッチングしてみましょう&excl;</p>
                                 </div>
                             </div>
                             <div class="row">
@@ -147,11 +150,11 @@
                             </div>
                             <div class="row">
                                 <div class="col-md p-0">
-                                    <figure class="col-md p-0 text-center">
+                                    <figure class="col-lg p-0 text-center">
                                         <img class="main-center-explation-img-content" src="img/main/section-trimmer-search.png" alt="お店検索補足画像">
                                     </figure>
                                 </div>
-                                <div class="col-md p-0">
+                                <div class="col-lg p-0">
                                     <p class="main-center-explation-content">身近にあなたの役に立ちたいと思っているトリマーのお店を探してみましょう&excl;</p>
                                 </div>
                             </div>
@@ -176,12 +179,12 @@
                             </div>
                             <div class="row">
                                 <div class="col-md p-0">
-                                    <figure class="col-md p-0 text-center">
+                                    <figure class="col-lg p-0 text-center">
                                         <img class="main-center-explation-img-content" src="img/main/section-owner-message.png" alt="お店へダイレクトメッセージ補足画像">
                                     </figure>
                                 </div>
-                                <div class="col-md p-0">
-                                    <p class="main-center-explation-content">実際にトリミングしてほしいお店と連絡をとり、マッチングしてみましょう&excl;</p>
+                                <div class="col-lg p-0">
+                                    <p class="main-center-explation-content">実際にトリミングしてほしいお店と連絡をして、マッチングしてみましょう&excl;</p>
                                 </div>
                             </div>
                             <div class="row">
@@ -203,7 +206,7 @@
 
     <!--フッター-->
     <footer>    
-        <div class="d-flex justify-content-end footer-top">
+        <div class="d-flex justify-content-end pr-3 footer-top">
             <a class="move-page--top" href="#">
                 <img src="img/icon/return_top.png" alt="トップへ戻るアイコン"> <strong>AniMatchの上部へ戻る</strong>
             </a>
@@ -223,7 +226,7 @@
                     </div>
 
                     <div class="col-md-3 mb-md-0 mb-3">
-                        <h5 class="text-uppercase">お店専用メニュー</h5>
+                        <h5 class="text-uppercase">お店専用</h5>
                         <ul class="list-unstyled">
                             <li><a href="search.html">飼い主を探す</a></li>
                             <li><a href="dmessage.html">飼い主へダイレクトメッセージ</a></li>
@@ -231,7 +234,7 @@
                     </div>
 
                     <div class="col-md-3 mb-md-0 mb-3">
-                        <h5 class="text-uppercase">飼い主専用メニュー</h5>
+                        <h5 class="text-uppercase">飼い主専用</h5>
                         <ul class="list-unstyled">
                             <li><a href="search.html">お店を探す</a></li>
                             <li><a href="dmessage.html">お店へダイレクトメッセージ</a></li>
