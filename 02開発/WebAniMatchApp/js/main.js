@@ -1,23 +1,15 @@
 $(document).ready(function(){
 
+    //アクション:「main-center-block」の検索ブロックをクリック
     $('.is-show--search').click(function () {
         // 同じタグで表示
         location.href = 'search.html';
     });
 
+    //アクション:「main-center-block」のダイレクトメッセージブロックをクリック
     $('.is-show--dmessage').click(function () {
         // 同じタグで表示
         location.href = 'dmessage.html';
-    });
-
-    $('.is-show--login').click(function () {
-        // 同じタグで表示
-        location.href = 'login.html';
-    });
-
-    $('.is-show--regist').click(function () {
-        // 同じタグで表示
-        location.href = 'regist.html';
     });
 
     $('.move-page--top').click(function() {
