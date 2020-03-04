@@ -1,0 +1,33 @@
+/* 表示・非表示用 */
+.hide {
+    display:none;
+}
+
+.required-fields {
+    border: solid 3px rgb(255,0,0);
+}
+
+/* 全体 */
+html {
+    overflow-y:scroll;
+}
+
+body {
+    font-family:fantasy;
+    font-size:80%;
+    color:rgb(0, 0, 0);
+}
+
+a {
+    color:rgb(0, 0, 0);
+    text-decoration:none;
+}
+
+/* フッター */
+footer {
+    background-color:rgb(255, 255, 200);
+}
+
+.footer-top {
+    min-height:30px;
+}

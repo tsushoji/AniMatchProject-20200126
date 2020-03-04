@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- ビューポートの設定 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+    <title>新規会員登録</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="css/regist.css" />
+
+    <!-- ajaxzip3 -->
+    <script type="text/javascript" src="js/ajaxzip3.github.io/ajaxzip3.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+
+    <script src="js/commons/page_move.js"></script>
+    <script src="js/regist.js"></script>
+
+</head>
+<body>
+
+
+    <!--グリッドシステム-->
+    <div class="container">
+    
+        <div class="text-center">
+
+            <div>
+                <img src="img/rogo/animatch.png" alt="Animatchロゴ">
+            </div>
+
+            <h2>
+                &lt;&lt;新規会員登録&gt;&gt;
+            </h2>
+
+            <p>
+                新規会員にご登録をいただくと、無料でAniMatchでのサービスをご利用いただくことができます。<br>
+                以下登録フォームにお客様情報をご入力ください。
+            </p>
+
+        </div>
+
+        <!--入力フォーム-->
+        <form>
+            <label for="registtype">登録区分</label>
+            <select name="registtype" id="registtype" class="form-control required-fields">
+                <option value="0">選んでください</option>
+                <option value="1">飼い主</option>
+                <option value="2">トリマー</option>
+            </select>
+        </form>
+
+        <!--飼い主用フォーム-->
+        <div id="owner-form" class="py-5 hide">
+            
+            <!--入力フォーム-->
+            <form>
+
+                <div class="text-center">
+                    <h3>
+                        お客様情報
+                    </h3>
+                </div>
+        
+                <div class="row pt-3">
+
+                    <div class="col-3">
+                        <label for="lastname--owner">ラストネーム</label>
+                        <input type="text" id="lastname--owner" class="form-control">
+                    </div>
+
+                    <div class="col-3">
+                        <label for="fastname--owner">ファーストネーム</label>
+                        <input type="text" id="fastname--owner" class="form-control">
+                    </div>
+
+                    <div class="col-5">
+                        <div class="row">
+                            <div class="col-6">
+                                <label for="year--owner">年&ndash;生年月日</label>
+                                <input type="text" id="year--owner" class="form-control">      
+                            </div>
+                            <div class="col-3">
+                                <label for="month--owner">月&ndash;生年月日</label>
+                                <input type="text" id="month--owner" class="form-control">
+                            </div>
+                            <div class="col-3">
+                                <label for="day--owner">日&ndash;生年月日</label>
+                                <input type="text" id="day--owner" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-1">
+                        <p>性別</p>
+                        <div class="row">
+                            <div class="col-6 radio pr-0">
+                                <input type="radio" name="gender--human" id="man" value="1">
+                                <label for="man">男性</label>      
+                            </div>
+                            <div class="col-6 radio pl-0">
+                                <input type="radio" name="gender--human" id="woman" value="2">
+                                <label for="woman">女性</label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row pt-3">
+
+                    <div class="col-4">
+                        <label for="postalcode--owner">郵便番号&ndash;7桁</label>
+                        <input type="text" name="postalcode--owner" class="form-control" size="8" maxlength="7" name="zip" onKeyUp="AjaxZip3.zip2addr('postalcode--owner', '', 'prefectures--owner', 'cities--owner');" >
+                    </div>
+
+                    <div class="col-4">
+                        <label for="prefectures--owner">住所&ndash;都道府県</label>
+                        <select name="prefectures--owner" id="prefectures--owner" class="custom-select form-control">
+                            <option value="0">選んでください</option>
+                            <option value="1">北海道</option>
+                            <option value="2">青森県</option>
+                            <option value="3">岩手県</option>
+                            <option value="4">宮城県</option>
+                            <option value="5">秋田県</option>
+                            <option value="6">山形県</option>
+                            <option value="7">福島県</option>
+                            <option value="8">茨城県</option>
+                            <option value="9">栃木県</option>
+                            <option value="10">群馬県</option>
+                            <option value="11">埼玉県</option>
+                            <option value="12">千葉県</option>
+                            <option value="13">東京都</option>
+                            <option value="14">神奈川県</option>
+                            <option value="15">新潟県</option>
+                            <option value="16">富山県</option>
+                            <option value="17">石川県</option>
+                            <option value="18">福井県</option>
+                            <option value="19">山梨県</option>
+                            <option value="20">長野県</option>
+                            <option value="21">岐阜県</option>
+                            <option value="22">静岡県</option>
+                            <option value="23">愛知県</option>
+                            <option value="24">三重県</option>
+                            <option value="25">滋賀県</option>
+                            <option value="26">京都府</option>
+                            <option value="27">大阪府</option>
+                            <option value="28">兵庫県</option>
+                            <option value="29">奈良県</option>
+                            <option value="30">和歌山県</option>
+                            <option value="31">鳥取県</option>
+                            <option value="32">島根県</option>
+                            <option value="33">岡山県</option>
+                            <option value="34">広島県</option>
+                            <option value="35">山口県</option>
+                            <option value="36">徳島県</option>
+                            <option value="37">香川県</option>
+                            <option value="38">愛媛県</option>
+                            <option value="39">高知県</option>
+                            <option value="40">福岡県</option>
+                            <option value="41">佐賀県</option>
+                            <option value="42">長崎県</option>
+                            <option value="43">熊本県</option>
+                            <option value="44">大分県</option>
+                            <option value="45">宮崎県</option>
+                            <option value="46">鹿児島県</option>
+                            <option value="47">沖縄県</option>
+                        </select>
+                    </div>
+                    
+                    <div class="col-4">
+                        <label for="cities--owner">住所&ndash;市町村</label>
+                        <input type="text" name="cities--owner" id="cities--owner" class="form-control">
+                    </div>
+
+                </div>
+
+                <div class="row pt-3">
+
+                    <div class="col-7">
+                        <label for="mailaddres--owner">メールアドレス</label>
+                        <input type="text" id="mailaddres--owner" class="form-control">
+                    </div>
+
+                    <div class="col-5">
+                        <label for="phonenumber--owner">電話番号&ndash;ハイフン除く</label>
+                        <input type="text" id="phonenumber--owner" class="form-control">
+                    </div>
+
+                </div>
+
+                <div class="row pt-3">
+
+                    <div class="col-6">
+                        <label for="username--owner">ユーザー名</label>
+                        <input type="text" id="username--owner" class="form-control">
+                    </div>
+
+                    <div class="col-6">
+                        <label for="password--owner">パスワード</label>
+                        <input type="text" id="password--owner" class="form-control">
+                    </div>
+
+                </div>
+                    
+            </form>
+    
+            <div class="pt-5 text-center">
+                <h3>
+                    ペット情報
+                </h3>
+            </div>
+
+            <!--入力フォーム-->
+            <form>
+        
+                <div class="row">
+
+                    <div class="col-6 pt-3">
+                        <label for="img--pet">ペットイメージ画像</label>
+                        <input type="text" id="img--pet" class="form-control">
+                    </div>
+
+                    <div class="col-6">
+                        
+                        <div class="row pt-3">
+
+                            <div class="col-8">
+                                <label for="nickname--pet">ニックネーム</label>
+                                <input type="text" id="nickname" class="form-control">
+                            </div>
+
+                            <div class="col-4">
+                                <p>性別</p>
+                                <div class="row">
+                                    <div class="col-6 radio pr-0">
+                                        <input type="radio" name="gender--pet" id="male" value="1">
+                                        <label for="male">オス</label>      
+                                    </div>
+                                    <div class="col-6 radio pl-0">
+                                        <input type="radio" name="gender--pet" id="female" value="2">
+                                        <label for="female">メス</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row pt-3">
+
+                            <div class="col-6">
+                                <label for="type--pet">種別</label>
+                                <select name="type--animal" id="type--animal" class="custom-select form-control">
+                                    <option value="0">選んでください</option>
+                                    <option value="1">犬</option>
+                                    <option value="2">猫</option>
+                                </select>
+                            </div>
+
+                            <div class="col-6">
+                                <label for="weight--pet">体重&ndash;&#13080;</label>
+                                <input type="text" id="weight" class="form-control">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row pt-3">
+
+                    <div class="col">
+                        <label for="remark--owner">備考</label>
+                        <textarea id="remark--owner" class=form-control></textarea>
+                    </div>
+
+                </div>
+                    
+            </form>
+    
+        </div>
+
+        <!--お店用フォーム-->
+        <div id="trimmer-form" class="py-5 hide">
+            
+            <!--入力フォーム-->
+            <form>
+
+                <div class="text-center">
+                    <h3>
+                        お客様情報
+                    </h3>
+                </div>
+        
+                <div class="row pt-3">
+
+                    <div class="col-6">
+                        <label for="lastname--trimmer">ラストネーム&ndash;代表者</label>
+                        <input type="text" id="lastname--trimmer" class="form-control">
+                    </div>
+
+                    <div class="col-6">
+                        <label for="fastname--trimmer">ファーストネーム&ndash;代表者</label>
+                        <input type="text" id="fastname--trimmer" class="form-control">
+                    </div>
+
+                </div>
+
+                <div class="row pt-3">
+
+                    <div class="col-6">
+                        <label for="username--trimmer">ユーザー名&ndash;代表者</label>
+                        <input type="text" id="username--trimmer" class="form-control">
+                    </div>
+
+                    <div class="col-6">
+                        <label for="password--trimmer">パスワード&ndash;代表者</label>
+                        <input type="text" id="password--trimmer" class="form-control">
+                    </div>
+
+                </div>
+        
+            </form>
+    
+            <div class="pt-5 text-center">
+                <h3>
+                    お店情報
+                </h3>
+            </div>
+
+            <!--入力フォーム-->
+            <form>
+        
+                <div class="row">
+
+                    <div class="col-6 pt-3">
+                        <label for="img--pet">お店イメージ画像</label>
+                        <input type="text" id="img--pet" class="form-control">
+                    </div>
+
+                    <div class="col-6">
+                        
+                        <div class="row pt-3">
+
+                            <div class="col-5">
+                                <label for="storename--trimmer">店名</label>
+                                <input type="text" id="storename--trimmer" class="form-control">
+                            </div>
+
+                            <div class="col-4">
+                                <label for="businesshours--trimmer">営業時間</label>
+                                <input type="text" id="businesshours--trimmer" class="form-control">
+                            </div>
+
+                            <div class="col-3">
+                                <label for="numberofemployees--trimmer">従業員数&ndash;人</label>
+                                <input type="text" id="numberofemployees--trimmer" class="form-control">
+                            </div>
+
+                        </div>
+
+                        <div class="row pt-3">
+
+                            <div class="col-4">
+                                <label for="postalcode--trimmer">郵便番号&ndash;7桁</label>
+                                <input type="text" name="postalcode--trimmer" class="form-control" size="8" maxlength="7" name="zip" onKeyUp="AjaxZip3.zip2addr('postalcode--trimmer', '', 'prefectures--trimmer', 'cities--trimmer');" >
+                            </div>
+        
+                            <div class="col-4">
+                                <label for="prefectures--trimmer">住所&ndash;都道府県</label>
+                                <select name="prefectures--trimmer" id="prefectures--trimmer" class="custom-select form-control">
+                                    <option value="0">選んでください</option>
+                                    <option value="1">北海道</option>
+                                    <option value="2">青森県</option>
+                                    <option value="3">岩手県</option>
+                                    <option value="4">宮城県</option>
+                                    <option value="5">秋田県</option>
+                                    <option value="6">山形県</option>
+                                    <option value="7">福島県</option>
+                                    <option value="8">茨城県</option>
+                                    <option value="9">栃木県</option>
+                                    <option value="10">群馬県</option>
+                                    <option value="11">埼玉県</option>
+                                    <option value="12">千葉県</option>
+                                    <option value="13">東京都</option>
+                                    <option value="14">神奈川県</option>
+                                    <option value="15">新潟県</option>
+                                    <option value="16">富山県</option>
+                                    <option value="17">石川県</option>
+                                    <option value="18">福井県</option>
+                                    <option value="19">山梨県</option>
+                                    <option value="20">長野県</option>
+                                    <option value="21">岐阜県</option>
+                                    <option value="22">静岡県</option>
+                                    <option value="23">愛知県</option>
+                                    <option value="24">三重県</option>
+                                    <option value="25">滋賀県</option>
+                                    <option value="26">京都府</option>
+                                    <option value="27">大阪府</option>
+                                    <option value="28">兵庫県</option>
+                                    <option value="29">奈良県</option>
+                                    <option value="30">和歌山県</option>
+                                    <option value="31">鳥取県</option>
+                                    <option value="32">島根県</option>
+                                    <option value="33">岡山県</option>
+                                    <option value="34">広島県</option>
+                                    <option value="35">山口県</option>
+                                    <option value="36">徳島県</option>
+                                    <option value="37">香川県</option>
+                                    <option value="38">愛媛県</option>
+                                    <option value="39">高知県</option>
+                                    <option value="40">福岡県</option>
+                                    <option value="41">佐賀県</option>
+                                    <option value="42">長崎県</option>
+                                    <option value="43">熊本県</option>
+                                    <option value="44">大分県</option>
+                                    <option value="45">宮崎県</option>
+                                    <option value="46">鹿児島県</option>
+                                    <option value="47">沖縄県</option>
+                                </select>
+                            </div>
+                            
+                            <div class="col-4">
+                                <label for="cities--trimmer">住所&ndash;市町村</label>
+                                <input type="text" name="cities--trimmer" id="cities--trimmer" class="form-control">
+                            </div>
+        
+                        </div>
+        
+                        <div class="row pt-3">
+        
+                            <div class="col-7">
+                                <label for="mailaddres--trimmer">メールアドレス</label>
+                                <input type="text" id="mailaddres--trimmer" class="form-control">
+                            </div>
+        
+                            <div class="col-5">
+                                <label for="phonenumber--trimmer">電話番号&ndash;ハイフン除く</label>
+                                <input type="text" id="phonenumber--trimmer" class="form-control">
+                            </div>
+        
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row pt-3">
+
+                    <div class="col-6">
+                        <label for="servicecontents--trimmer">コース・値段</label>
+                        <textarea id="servicecontents--trimmer" class=form-control></textarea>
+                    </div>
+
+                    <div class="col-6">
+                        <label for="appealpoint--trimmer">こだわりポイント</label>
+                        <textarea id="appealpoint--trimmer" class=form-control></textarea>
+                    </div>
+
+                </div>
+
+                <div class="row pt-3">
+
+                    <div class="col-4">
+                        <label for="licenseexistence--trimmer">ライセンスの有無</label>
+                        <select name="licenseexistence--trimmer" id="licenseexistence--trimmer" class="custom-select form-control">
+                            <option value="0">選んでください</option>
+                            <option value="1">有</option>
+                            <option value="2">無</option>
+                        </select>
+                    </div>
+
+                    <div class="col-8">
+                        <label for="licenseinformation--trimmer">ライセンス情報</label>
+                        <textarea id="licenseinformation--trimmer" class=form-control></textarea>
+                    </div>
+
+                </div>
+                    
+            </form>
+    
+        </div>
+                
+    </div>
+
+
+    <!--フッター-->
+    <footer>        
+        <!-- <div class="d-flex justify-content-end pr-3 footer-top hide"> -->
+        <div class="d-flex justify-content-end pr-3 footer-top">
+            <a class="move-page--top" href="#">
+                <img src="img/icon/return_top.png" alt="トップへ戻るアイコン"> <strong>新規会員登録の上部へ戻る</strong>
+            </a>
+        </div>
+
+
+        <div class="footer-copyright text-center py-3">
+            copyright(c) 2020 AniMatch.
+            <a href="index.html">飼い主とトリマーを繋げるマッチングアプリ</a>
+        </div>
+    </footer>
+
+
+</body>
+</html>
