@@ -9,17 +9,17 @@ $(document).ready(function(){
             //飼い主用フォームを表示
             $('#owner-form').removeClass('hide');
             $('#trimmer-form').addClass('hide');
-            // $('.footer-top').removeClass('hide');
+            $('.footer-top-content').removeClass('hide');
         }else if(val == '2'){
             //トリマー用フォームを表示
             $('#owner-form').addClass('hide');
             $('#trimmer-form').removeClass('hide');
-            // $('.footer-top').removeClass('hide');
+            $('.footer-top-content').removeClass('hide');
         }else{
             //フォームを非表示
             $('#owner-form').addClass('hide');
             $('#trimmer-form').addClass('hide');
-            // $('.footer-top').addClass('hide');
+            $('.footer-top-content').addClass('hide');
         }   
       });
 
