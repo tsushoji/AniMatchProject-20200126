@@ -3,6 +3,7 @@
     display:none;
 }
 
+/* 必須項目 */
 .required-fields {
     border: solid 3px rgb(255,0,0);
 }
