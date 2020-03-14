@@ -296,7 +296,7 @@
                 </div>
             </div>
 
-            <div class="form-row day-val--1 hide">
+            <div class="form-row day-val--0 hide">
 
                 <h3 class="pt-3">日曜日</h3>
 
@@ -317,7 +317,7 @@
                 
             </div>
 
-            <div class="form-row day-val--2 hide">
+            <div class="form-row day-val--1 hide">
 
                 <h3 class="pt-3">月曜日</h3>
 
@@ -338,7 +338,7 @@
                 
             </div>
 
-            <div class="form-row day-val--3 hide">
+            <div class="form-row day-val--2 hide">
 
                 <h3 class="pt-3">火曜日</h3>
 
@@ -359,7 +359,7 @@
                 
             </div>
 
-            <div class="form-row day-val--4 hide">
+            <div class="form-row day-val--3 hide">
 
                 <h3 class="pt-3">水曜日</h3>
 
@@ -380,7 +380,7 @@
                 
             </div>
 
-            <div class="form-row day-val--5 hide">
+            <div class="form-row day-val--4 hide">
 
                 <h3 class="pt-3">木曜日</h3>
 
@@ -401,7 +401,7 @@
                 
             </div>
 
-            <div class="form-row day-val--6 hide">
+            <div class="form-row day-val--5 hide">
 
                 <h3 class="pt-3">金曜日</h3>
 
@@ -422,7 +422,7 @@
                 
             </div>
 
-            <div class="form-row day-val--7 hide">
+            <div class="form-row day-val--6 hide">
 
                 <h3 class="pt-3">土曜日</h3>
 
@@ -511,11 +511,22 @@
     <script>
         $(document).ready(function(){
             // $("#plugin--multipicker").multiPicker({ selector : "li" });
+            $("#plugin--multipicker").multiPicker({
+            "selector" : "li",
             //アクション:「営業時間」の営業日選択値が変更される
-            $("#plugin--multipicker").multiPicker({ onSelector : function () {
-                var data = $('#plugin--multipicker li.active').toArray();
-                console.log(data);
-            } });
+            "onSelect" : function (elm, val) {
+                console.log(elm);
+                console.log(val);
+                $(".day-val--" + val).removeClass('hide');
+                },
+            
+            "onUnselect" : function (elm, val) {
+                console.log(elm);
+                console.log(val);
+                $(".day-val--" + val).addClass('hide');
+                }
+            });
+
         });
     </script>
 
