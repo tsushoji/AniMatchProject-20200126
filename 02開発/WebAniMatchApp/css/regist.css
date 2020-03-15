@@ -1,9 +1,4 @@
-/* 表示・非表示用 */
-.hide {
-    display:none;
-}
-
-/* 必須項目 */
+/* 必須項目を入力間違いの場合の指定 */
 input:required {
     background:rgb(248, 192, 192);
 }

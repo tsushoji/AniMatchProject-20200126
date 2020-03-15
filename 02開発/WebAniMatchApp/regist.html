@@ -5,7 +5,7 @@
 
     <!-- ビューポートの設定 -->
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    
+
     <title>新規会員登録</title>
 
     <!-- plugin -->
@@ -23,6 +23,7 @@
     <link rel="stylesheet" type="text/css" href="css/plugin/multipicker/multipicker.min.css">
 
     <link rel="stylesheet" href="css/regist.css" />
+    <link rel="stylesheet" href="css/commons/component.css" />
 
     <!-- bootstrap -->
     <!-- pluginより先読み -->
@@ -31,7 +32,7 @@
     <script src="js/bootstrap/bootstrap.min.js"></script>
     <!-- bootstrap datepicker -->
     <script type="text/javascript" src="js/bootstrap/bootstrap-datepicker.min.js"></script>
-    <script type="text/javascript" src="locales/bootstrap-datepicker.ja.min.js"></script>
+    <script type="text/javascript" src="js/locales/bootstrap-datepicker.ja.min.js"></script>
 
     <!-- ajaxzip3 -->
     <script type="text/javascript" src="js/ajaxzip3.github.io/ajaxzip3.js"></script>
@@ -42,7 +43,7 @@
     <!-- plugin multipicker -->
     <script src="js/plugin/multipicker/multipicker.min.js"></script>
 
-    <script src="js/commons/page_move.js"></script>
+    <script src="js/commons/pageMove.js"></script>
     <script src="js/regist.js"></script>
 
 
@@ -52,7 +53,7 @@
 
     <!--グリッドシステム-->
     <div class="container">
-    
+
         <div class="text-center">
 
             <div>
@@ -69,40 +70,40 @@
             </p>
 
         </div>
-            
+
         <!--入力フォーム-->
         <form>
 
             <div class="form-group">
-                <label for="registtype"><span class="badge badge-danger">必須</span>登録区分</label>
-                <select name="registtype" id="registtype" class="form-control">
+                <label for="regist-type"><span class="badge badge-danger">必須</span>登録区分</label>
+                <select name="regist-type" id="regist-type" class="form-control">
                     <option value="0">選んでください</option>
                     <option value="1">飼い主</option>
                     <option value="2">トリマー</option>
                 </select>
-            </div>         
+            </div>
 
-            <div class="form--common hide">
+            <div class="form-common hide">
                 <h3 class="mb-0">
                     会員情報
                 </h3>
             </div>
 
-            <div class="form-row form--common hide">
+            <div class="form-row form-common hide">
 
                 <div class="form-group col-4">
                     <label class="control-label"><span class="badge badge-danger">必須</span>ラストネーム</label>
-                    <input type="text" class="form-control" placeholder="ヤマダ" required>
+                    <input type="text" class="form-control" placeholder="ヤマダ">
                 </div>
-    
+
                 <div class="form-group col-4">
                     <label class="control-label"><span class="badge badge-danger">必須</span>ファーストネーム</label>
-                    <input type="text" class="form-control" placeholder="タロウ" required>
+                    <input type="text" class="form-control" placeholder="タロウ">
                 </div>
 
             </div>
 
-            <div class="form-group form--common hide">
+            <div class="form-group form-common hide">
                 <label class="control-label">性別</label>
                 <div class="radio">
                     <label><input type="radio" name="radio" value="1">男性</label>
@@ -110,51 +111,51 @@
                 </div>
             </div>
 
-            <div class="form-row form--common hide">
+            <div class="form-row form-common hide">
                 <div class="form-group col-4">
                     <label class="control-label"><span class="badge badge-danger">必須</span>生年月日</label>
-                    <input type="date" class="form-control" id="bootstrap-datepicker" required>               
+                    <input type="text" class="form-control plugin-datepicker">            
                 </div>
             </div>
 
-            <div class="form-row form--common hide">
+            <div class="form-row form-common hide">
 
                 <div class="form-group col-4">
                     <label class="control-label"><span class="badge badge-danger">必須</span>ユーザー名</label>
-                    <input type="text" class="form-control" required>
+                    <input type="text" class="form-control">
                 </div>
 
                 <div class="form-group col-4">
 
                     <label class="control-label"><span class="badge badge-danger">必須</span>パスワード</label>
-                    <input type="password" class="form-control" required>
+                    <input type="password" class="form-control">
 
                     <label class="control-label"><span class="badge badge-danger">必須</span>再入力</label>
-                    <input type="text" class="form-control" required>
+                    <input type="password" class="form-control">
 
-                </div>   
+                </div>
 
             </div>
-            
-            <div class="form--owner hide">
+
+            <div class="form-owner hide">
                 <h3 class="mb-0">
                     お住まい情報
                 </h3>
             </div>
 
-            <div class="form--trimmer hide">
+            <div class="form-trimmer hide">
                 <h3 class="mb-0">
                     お店情報
                 </h3>
             </div>
 
-            <div class="form-row form--common hide">
-                
+            <div class="form-row form-common hide">
+
                 <div class="form-group col-3">
-                    <label class="control-label" for="postalcode"><span class="badge badge-danger">必須</span>郵便番号</label>
-                    <input type="text" name="postalcode" class="form-control" placeholder="9991234" required maxlength="7" name="zip" onKeyUp="AjaxZip3.zip2addr('postalcode', '', 'prefectures', 'cities');" >
+                    <label class="control-label" for="postal-code"><span class="badge badge-danger">必須</span>郵便番号</label>
+                    <input type="text" name="postal-code" class="form-control" placeholder="9991234" maxlength="7" name="zip" onKeyUp="AjaxZip3.zip2addr('postal-code', '', 'prefectures', 'cities');" >
                 </div>
-    
+
                 <div class="form-group col-2">
                     <label class="control-label" for="prefectures"><span class="badge badge-danger">必須</span>住所&ndash;都道府県</label>
                     <select name="prefectures" id="prefectures" class="custom-select form-control">
@@ -208,47 +209,47 @@
                         <option value="47">沖縄県</option>
                     </select>
                 </div>
-    
+
                 <div class="form-group col-3">
                     <label class="control-label" for="cities"><span class="badge badge-danger">必須</span>住所&ndash;市町村</label>
-                    <input type="text" name="cities" id="cities" class="form-control" required maxlength="6">        
+                    <input type="text" name="cities" id="cities" class="form-control" maxlength="6">      
                 </div>
 
-            </div>            
+            </div>
 
-            <div class="form-row form--common hide">
+            <div class="form-row form-common hide">
                 <div class="form-group col-5">
                     <label class="control-label"><span class="badge badge-danger">必須</span>メールアドレス</label>
-                    <input type="email" class="form-control" placeholder="xxxxxxx@xx.xx.xx" required maxlength="254">
+                    <input type="email" class="form-control" placeholder="xxxxxxx@xx.xx.xx" maxlength="254">
                 </div>
             </div>
-            
-            <div class="form-row form--common hide">
+
+            <div class="form-row form-common hide">
                 <div class="form-group col-4">
                     <label class="control-label"><span class="badge badge-danger">必須</span>電話番号</label>
-                    <input type="tel" class="form-control" placeholder="09012345678" required maxlength="11">
+                    <input type="tel" class="form-control" placeholder="09012345678" maxlength="11">
                 </div>
-            </div>            
+            </div>   
 
-            <div class="form--owner hide">
+            <div class="form-owner hide">
                 <h3 class="mb-0">
                     ペット情報
                 </h3>
             </div>
 
-            <div class="form-group form--common hide">
+            <div class="form-group form-common hide">
                 <label class="control-label">イメージ画像</label>
-                <input type="file" class="dropify" name="file">
+                <input type="file" class="plugin-dropify" name="file">
             </div>
 
-            <div class="form-row form--owner hide">
+            <div class="form-row form-owner hide">
                 <div class="form-group col-4">
                     <label class="control-label">ニックネーム</label>
                     <input type="text" class="form-control" placeholder="シロ">
                 </div>
             </div>
 
-            <div class="form-group form--owner hide">
+            <div class="form-group form-owner hide">
                 <label class="control-label">性別</label>
                 <div class="radio">
                     <label><input type="radio" name="radio" value="1">オス</label>
@@ -256,7 +257,7 @@
                 </div>
             </div>
 
-            <div class="form-row form--owner hide">
+            <div class="form-row form-owner hide">
                 <div class="form-group col-2">
                     <label class="control-label">種別</label>
                     <select name="type--pet" class="custom-select form-control">
@@ -265,26 +266,26 @@
                         <option value="2">猫</option>
                     </select>
                 </div>
-            </div>                   
+            </div>           
 
-            <div class="form-row form--owner hide">
+            <div class="form-row form-owner hide">
                 <div class="form-group col-1">
                     <label class="control-label">体重&ndash;&#13199;</label>
                     <input type="text" class="form-control" placeholder="23" maxlength="6">
                 </div>
-            </div>            
+            </div>
 
-            <div class="form-row form--trimmer hide">
+            <div class="form-row form-trimmer hide">
                 <div class="form-group col-4">
                     <label class="control-label"><span class="badge badge-danger">必須</span>店名</label>
-                    <input type="text" class="form-control" required placeholder="ペットサロン ヤマダ">
+                    <input type="text" class="form-control" placeholder="ペットサロン ヤマダ">
                 </div>
-            </div>            
+            </div>
 
-            <div class="form-group form--trimmer hide">
+            <div class="form-group form-trimmer hide">
                 <label class="control-label">営業時間</label>
                 <div>
-                    <ul id="plugin--multipicker">
+                    <ul class="plugin-multipicker">
                         <li>日</li>
                         <li>月</li>
                         <li>火</li>
@@ -296,13 +297,13 @@
                 </div>
             </div>
 
-            <div class="form-row day-val--0 hide">
+            <div class="form-row day-val-0 hide">
 
                 <h3 class="pt-3">日曜日</h3>
 
                 <div class="form-group col-1">
                     <label class="control-label">開始時間</label>
-                    <input type="time" class="form-control">        
+                    <input type="time" class="form-control">    
                 </div>
 
                 <div class="form-group col-1">
@@ -314,170 +315,170 @@
                     <label class="control-label">補足</label>
                     <textarea class="form-control" placeholder="第一日曜日は休業。"></textarea>
                 </div>
-                
+
             </div>
 
-            <div class="form-row day-val--1 hide">
+            <div class="form-row day-val-1 hide">
 
                 <h3 class="pt-3">月曜日</h3>
 
                 <div class="form-group col-1">
                     <label class="control-label">開始時間</label>
-                    <input type="time" class="form-control">        
+                    <input type="time" class="form-control">    
                 </div>
 
                 <div class="form-group col-1">
                     <label class="control-label">終了時間</label>
-                    <input type="time" class="form-control">        
+                    <input type="time" class="form-control">     
                 </div>
 
                 <div class="form-group col-5">
                     <label class="control-label">補足</label>
                     <textarea class="form-control" placeholder="第一月曜日は休業。"></textarea>
                 </div>
-                
+
             </div>
 
-            <div class="form-row day-val--2 hide">
+            <div class="form-row day-val-2 hide">
 
                 <h3 class="pt-3">火曜日</h3>
 
                 <div class="form-group col-1">
                     <label class="control-label">開始時間</label>
-                    <input type="time" class="form-control">        
+                    <input type="time" class="form-control">   
                 </div>
 
                 <div class="form-group col-1">
                     <label class="control-label">終了時間</label>
-                    <input type="time" class="form-control">        
+                    <input type="time" class="form-control">     
                 </div>
 
                 <div class="form-group col-5">
                     <label class="control-label">補足</label>
                     <textarea class="form-control" placeholder="第一火曜日は休業。"></textarea>
                 </div>
-                
+
             </div>
 
-            <div class="form-row day-val--3 hide">
+            <div class="form-row day-val-3 hide">
 
                 <h3 class="pt-3">水曜日</h3>
 
                 <div class="form-group col-1">
                     <label class="control-label">開始時間</label>
-                    <input type="time" class="form-control">        
+                    <input type="time" class="form-control">    
                 </div>
 
                 <div class="form-group col-1">
                     <label class="control-label">終了時間</label>
-                    <input type="time" class="form-control">        
+                    <input type="time" class="form-control">     
                 </div>
 
                 <div class="form-group col-5">
                     <label class="control-label">補足</label>
                     <textarea class="form-control" placeholder="第一水曜日は休業。"></textarea>
                 </div>
-                
+
             </div>
 
-            <div class="form-row day-val--4 hide">
+            <div class="form-row day-val-4 hide">
 
                 <h3 class="pt-3">木曜日</h3>
 
                 <div class="form-group col-1">
                     <label class="control-label">開始時間</label>
-                    <input type="time" class="form-control">        
+                    <input type="time" class="form-control">     
                 </div>
 
                 <div class="form-group col-1">
                     <label class="control-label">終了時間</label>
-                    <input type="time" class="form-control">        
+                    <input type="time" class="form-control">      
                 </div>
 
                 <div class="form-group col-5">
                     <label class="control-label">補足</label>
                     <textarea class="form-control" placeholder="第一木曜日は休業。"></textarea>
                 </div>
-                
+
             </div>
 
-            <div class="form-row day-val--5 hide">
+            <div class="form-row day-val-5 hide">
 
                 <h3 class="pt-3">金曜日</h3>
 
                 <div class="form-group col-1">
                     <label class="control-label">開始時間</label>
-                    <input type="time" class="form-control">        
+                    <input type="time" class="form-control">     
                 </div>
 
                 <div class="form-group col-1">
                     <label class="control-label">終了時間</label>
-                    <input type="time" class="form-control">        
+                    <input type="time" class="form-control">     
                 </div>
 
                 <div class="form-group col-5">
                     <label class="control-label">補足</label>
                     <textarea class="form-control" placeholder="第一金曜日は休業。"></textarea>
                 </div>
-                
+
             </div>
 
-            <div class="form-row day-val--6 hide">
+            <div class="form-row day-val-6 hide">
 
                 <h3 class="pt-3">土曜日</h3>
 
                 <div class="form-group col-1">
                     <label class="control-label">開始時間</label>
-                    <input type="time" class="form-control">        
+                    <input type="time" class="form-control">      
                 </div>
 
                 <div class="form-group col-1">
                     <label class="control-label">終了時間</label>
-                    <input type="time" class="form-control">        
+                    <input type="time" class="form-control">     
                 </div>
 
                 <div class="form-group col-5">
                     <label class="control-label">補足</label>
                     <textarea class="form-control" placeholder="第一土曜日は休業。"></textarea>
                 </div>
-                
+
             </div>
 
-            <div class="form-row form--trimmer hide">
+            <div class="form-row form-trimmer hide">
                 <div class="form-group col-1">
                     <label class="control-label">従業員数&ndash;人</label>
                     <input type="text" class="form-control" placeholder="20" maxlength="6">
                 </div>
-            </div>            
+            </div>
 
-            <div class="form-group form--owner hide">
+            <div class="form-group form-owner hide">
                 <label class="control-label">備考</label>
                 <textarea class="form-control" rows="10" placeholder="トリマーに伝えておきたいことを書いてください"></textarea>
             </div>
 
-            <div class="form-group form--trimmer hide">
+            <div class="form-group form-trimmer hide">
                 <label class="control-label">コース・値段</label>
                 <textarea class="form-control" rows="10" placeholder="サービスの詳細を書いてください"></textarea>
             </div>
 
-            <div class="form-group form--trimmer hide">
+            <div class="form-group form-trimmer hide">
                 <label class="control-label">こだわりポイント</label>
                 <textarea class="form-control" rows="10" placeholder="セールスポイントを書いてください"></textarea>
             </div>
 
-            <div class="form-group form--common hide">
+            <div class="form-group form-common hide">
                 <input type="submit" class="btn btn-primary" value="新規登録">
             </div>
-                                     
+
         </form>
 
     </div>
 
 
     <!--フッター-->
-    <footer>        
+    <footer>
         <div class="d-flex justify-content-end pr-3 footer-top hide">
-            <a class="footer-top-content move-page--top hide" href="#">
+            <a class="footer-top-content move-page-top hide" href="#">
                 <img src="img/icon/return_top.png" alt="トップへ戻るアイコン"> <strong>新規会員登録の上部へ戻る</strong>
             </a>
         </div>
@@ -492,40 +493,36 @@
 
     <!-- bootstrap datepicker -->
     <script>
-        $('#bootstrap-datepicker').datepicker({
-            format: 'yyyy/mm/dd',
-            language:'ja',
-            startView: 1,
-            orientation: 'bottom'
+        $(document).ready(function(){
+            $('.plugin-datepicker').datepicker({
+                format: 'yyyy/mm/dd',
+                language:'ja',
+                orientation: 'bottom'
+            });
         });
     </script>
 
     <!-- plugin dropify -->
     <script>
         $(document).ready(function(){
-            $('.dropify').dropify();
+            $('.plugin-dropify').dropify();
         });
     </script>
 
     <!-- plugin multipicker -->
     <script>
         $(document).ready(function(){
-            // $("#plugin--multipicker").multiPicker({ selector : "li" });
-            $("#plugin--multipicker").multiPicker({
-            "selector" : "li",
-            //アクション:「営業時間」の営業日選択値が変更される
-            "onSelect" : function (elm, val) {
-                console.log(elm);
-                console.log(val);
-                $(".day-val--" + val).removeClass('hide');
-                },
-            
-            "onUnselect" : function (elm, val) {
-                console.log(elm);
-                console.log(val);
-                $(".day-val--" + val).addClass('hide');
-                }
-            });
+            $('.plugin-multipicker').multiPicker({
+                'selector' : 'li',
+                //アクション:「営業時間」の営業日選択値が変更される
+                'onSelect' : function (elm, val) {
+                    $('.day-val-' + val).removeClass('hide');
+                    },
+
+                'onUnselect' : function (elm, val) {
+                    $('.day-val-' + val).addClass('hide');
+                    }
+                });
 
         });
     </script>
