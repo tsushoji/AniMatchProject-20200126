@@ -75,7 +75,7 @@
         <form>
 
             <div class="form-group">
-                <label for="regist-type"><span class="badge badge-danger">必須</span>登録区分</label>
+                <label class="required-item" for="regist-type">登録区分</label>
                 <select name="regist-type" id="regist-type" class="form-control">
                     <option value="0">選んでください</option>
                     <option value="1">飼い主</option>
@@ -491,27 +491,20 @@
     </footer>
 
 
-    <!-- bootstrap datepicker -->
     <script>
+
         $(document).ready(function(){
+            //bootstrap datepicker
             $('.plugin-datepicker').datepicker({
                 format: 'yyyy/mm/dd',
                 language:'ja',
                 orientation: 'bottom'
             });
-        });
-    </script>
 
-    <!-- plugin dropify -->
-    <script>
-        $(document).ready(function(){
+            //plugin dropify
             $('.plugin-dropify').dropify();
-        });
-    </script>
 
-    <!-- plugin multipicker -->
-    <script>
-        $(document).ready(function(){
+            //plugin multipicker
             $('.plugin-multipicker').multiPicker({
                 'selector' : 'li',
                 //アクション:「営業時間」の営業日選択値が変更される
@@ -522,9 +515,9 @@
                 'onUnselect' : function (elm, val) {
                     $('.day-val-' + val).addClass('hide');
                     }
-                });
-
+            });
         });
+    
     </script>
 
 

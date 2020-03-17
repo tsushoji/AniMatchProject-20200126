@@ -3,6 +3,11 @@ input:required {
     background:rgb(248, 192, 192);
 }
 
+/* 入力必須項目の必須マーク */
+.required-item::after {
+    content:"必須";
+}
+
 /* 入力内容が正しかった場合の指定 */
 input.form-control:valid {
     background: transparent;

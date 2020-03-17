@@ -1,17 +1,24 @@
 $(document).ready(function(){
 
     //アクション:「登録区分」の値が変更される
-    $('#regist-type').on('change', function() {
+    $('#regist-type').change(function() {
+
+        //飼い主区分
+        const ownerType = '1';
+        //トリマー区分
+        const trimmerType = '2';
+
         //登録区分の値を取得
-        var registType = $(this).val();
+        let registType = $(this).val();
+
         //登録区分の値に応じて、formタグを表示・非表示にする
-        if(registType == '1'){
+        if(registType === ownerType){
             //飼い主用フォームを表示
             $('.form-common').removeClass('hide');
             $('.form-owner').removeClass('hide');
             $('.form-trimmer').addClass('hide');
             $('.footer-top-content').removeClass('hide');
-        }else if(registType == '2'){
+        }else if(registType === trimmerType){
             //トリマー用フォームを表示
             $('.form-common').removeClass('hide');
             $('.form-owner').addClass('hide');
