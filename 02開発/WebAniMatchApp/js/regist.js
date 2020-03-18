@@ -1,27 +1,29 @@
 $(document).ready(function(){
+    //初期表示時、フォームを非表示
+    $('.form-common,.form-owner,.form-trimmer,.form-trimmer-business-hours,.footer-top-content').hide();
 
     //アクション:「登録区分」の値が変更される
-    $('#registtype').change(function() {
+    $('#regist-type').change(function() {
+        //飼い主区分
+        const ownerType = '1';
+        //トリマー区分
+        const trimmerType = '2';
+
         //登録区分の値を取得
-        var val = $(this).val();
+        let registType = $(this).val();
+
         //登録区分の値に応じて、formタグを表示・非表示にする
-        if(val == '1'){
+        if(registType === ownerType){
             //飼い主用フォームを表示
-            $('#owner-form').removeClass('hide');
-            $('#trimmer-form').addClass('hide');
-            // $('.footer-top').removeClass('hide');
-        }else if(val == '2'){
+            $('.form-common,.form-owner,.footer-top-content').show();
+            $('.form-trimmer,.form-trimmer-business-hours').hide();
+        }else if(registType === trimmerType){
             //トリマー用フォームを表示
-            $('#owner-form').addClass('hide');
-            $('#trimmer-form').removeClass('hide');
-            // $('.footer-top').removeClass('hide');
+            $('.form-common,.form-trimmer,.footer-top-content').show();
+            $('.form-owner,.form-trimmer-business-hours').hide();
         }else{
             //フォームを非表示
-            $('#owner-form').addClass('hide');
-            $('#trimmer-form').addClass('hide');
-            // $('.footer-top').addClass('hide');
-        }   
+            $('.form-common,.form-owner,.form-trimmer,.form-trimmer-business-hours,.footer-top-content').hide();
+        }
       });
-
-
 });
