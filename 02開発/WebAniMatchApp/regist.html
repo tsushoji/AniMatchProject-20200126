@@ -90,28 +90,32 @@
 
             <div class="form-row form-common">
 
-                <div class="form-group col-4">
+                <div class="form-group col-md-4">
                     <label class="control-label required-item">ラストネーム</label>
-                    <input type="text" class="form-control" placeholder="ヤマダ">
+                    <input type="text" class="form-control col-md col-sm-5" placeholder="ヤマダ">
                 </div>
 
-                <div class="form-group col-4">
+                <div class="form-group col-md-4">
                     <label class="control-label required-item">ファーストネーム</label>
-                    <input type="text" class="form-control" placeholder="タロウ">
+                    <input type="text" class="form-control col-md col-sm-5" placeholder="タロウ">
                 </div>
 
             </div>
 
-            <div class="form-group form-common">
-                <label class="control-label">性別</label>
-                <div class="radio">
-                    <label><input type="radio" name="radio" value="1">男性</label>
-                    <label class="pl-3"><input type="radio" name="radio" value="2">女性</label>
-                </div>
+            <p class="mb-1 form-common">性別</p>
+
+            <div class="custom-control custom-radio custom-control-inline form-common">
+                <input type="radio" id="radio-man" name="radio-gender" class="custom-control-input">
+                <label class="custom-control-label" for="radio-man">男性</label>
             </div>
 
-            <div class="form-row form-common">
-                <div class="form-group col-4">
+            <div class="custom-control custom-radio custom-control-inline form-common">
+                <input type="radio" id="radio-woman" name="radio-gender" class="custom-control-input">
+                <label class="custom-control-label" for="radio-woman">女性</label>
+            </div>
+
+            <div class="form-row mt-3 form-common">
+                <div class="form-group col-md-4 col-sm-5">
                     <label class="control-label required-item">生年月日</label>
                     <input type="text" class="form-control plugin-datepicker">            
                 </div>
@@ -119,18 +123,18 @@
 
             <div class="form-row form-common">
 
-                <div class="form-group col-4">
+                <div class="form-group col-md-4 col-sm-5">
                     <label class="control-label required-item">ユーザー名</label>
                     <input type="text" class="form-control">
                 </div>
 
-                <div class="form-group col-4">
+                <div class="form-group col-md-4">
 
                     <label class="control-label required-item">パスワード</label>
-                    <input type="password" class="form-control">
+                    <input type="password" class="form-control col-md col-sm-5">
 
-                    <label class="control-label required-item">再入力</label>
-                    <input type="password" class="form-control">
+                    <label class="control-label mt-2 required-item">再入力</label>
+                    <input type="password" class="form-control col-md col-sm-5">
 
                 </div>
 
@@ -150,12 +154,12 @@
 
             <div class="form-row form-common">
 
-                <div class="form-group col-3">
+                <div class="form-group col-md-3">
                     <label class="control-label required-item" for="postal-code">郵便番号</label>
-                    <input type="text" name="postal-code" class="form-control" placeholder="9991234" maxlength="7" name="zip" onKeyUp="AjaxZip3.zip2addr('postal-code', '', 'prefectures', 'cities');" >
+                    <input type="text" name="postal-code" class="form-control col-md col-sm-3" placeholder="9991234" maxlength="7" name="zip" onKeyUp="AjaxZip3.zip2addr('postal-code', '', 'prefectures', 'cities');" >
                 </div>
 
-                <div class="form-group col-2">
+                <div class="form-group col-md-3 col-sm-5">
                     <label class="control-label required-item" for="prefectures">住所&ndash;都道府県</label>
                     <select name="prefectures" id="prefectures" class="custom-select form-control">
                         <option value="0">選んでください</option>
@@ -209,22 +213,22 @@
                     </select>
                 </div>
 
-                <div class="form-group col-3">
+                <div class="form-group col-md-3">
                     <label class="control-label required-item" for="cities">住所&ndash;市町村</label>
-                    <input type="text" name="cities" id="cities" class="form-control" maxlength="6">      
+                    <input type="text" name="cities" id="cities" class="form-control col-md col-sm-3" maxlength="6">      
                 </div>
 
             </div>
 
             <div class="form-row form-common">
-                <div class="form-group col-5">
+                <div class="form-group col-md-5 col-sm-6">
                     <label class="control-label required-item">メールアドレス</label>
                     <input type="email" class="form-control" placeholder="xxxxxxx@xx.xx.xx" maxlength="254">
                 </div>
             </div>
 
             <div class="form-row form-common">
-                <div class="form-group col-4">
+                <div class="form-group col-md-4 col-sm-5">
                     <label class="control-label required-item">電話番号</label>
                     <input type="tel" class="form-control" placeholder="09012345678" maxlength="11">
                 </div>
@@ -242,22 +246,26 @@
             </div>
 
             <div class="form-row form-owner">
-                <div class="form-group col-4">
+                <div class="form-group col-md-4 col-sm-5">
                     <label class="control-label">ニックネーム</label>
                     <input type="text" class="form-control" placeholder="シロ">
                 </div>
             </div>
 
-            <div class="form-group form-owner">
-                <label class="control-label">性別</label>
-                <div class="radio">
-                    <label><input type="radio" name="radio" value="1">オス</label>
-                    <label class="pl-3"><input type="radio" name="radio" value="2">メス</label>
-                </div>
+            <p class="mb-1 form-owner">性別</p>
+
+            <div class="custom-control custom-radio custom-control-inline form-owner">
+                <input type="radio" id="radio-male" name="radio-sex" class="custom-control-input">
+                <label class="custom-control-label" for="radio-male">オス</label>
             </div>
 
-            <div class="form-row form-owner">
-                <div class="form-group col-2">
+            <div class="custom-control custom-radio custom-control-inline form-owner">
+                <input type="radio" id="radio-female" name="radio-sex" class="custom-control-input">
+                <label class="custom-control-label" for="radio-female">メス</label>
+            </div>
+
+            <div class="form-row mt-3 form-owner">
+                <div class="form-group col-md-3 col-sm-5">
                     <label class="control-label">種別</label>
                     <select name="type--pet" class="custom-select form-control">
                         <option value="0">選んでください</option>
@@ -268,14 +276,14 @@
             </div>           
 
             <div class="form-row form-owner">
-                <div class="form-group col-1">
+                <div class="form-group col-md-2 col-sm-3">
                     <label class="control-label">体重&ndash;&#13199;</label>
                     <input type="text" class="form-control" placeholder="23" maxlength="6">
                 </div>
             </div>
 
             <div class="form-row form-trimmer">
-                <div class="form-group col-4">
+                <div class="form-group col-md-4 col-sm-6">
                     <label class="control-label required-item">店名</label>
                     <input type="text" class="form-control" placeholder="ペットサロン ヤマダ">
                 </div>
@@ -300,19 +308,19 @@
 
                 <h3 class="pt-3">日曜日</h3>
 
-                <div class="form-group col-1">
+                <div class="form-group col-lg-1">
                     <label class="control-label">開始時間</label>
-                    <input type="time" class="form-control">    
+                    <input type="time" class="form-control col-lg col-md-2 col-sm-3">    
                 </div>
 
-                <div class="form-group col-1">
+                <div class="form-group col-lg-1">
                     <label class="control-label">終了時間</label>
-                    <input type="time" class="form-control">        
+                    <input type="time" class="form-control col-lg col-md-2 col-sm-3">        
                 </div>
 
-                <div class="form-group col-5">
+                <div class="form-group col-lg-5">
                     <label class="control-label">補足</label>
-                    <textarea class="form-control" placeholder="第一日曜日は休業。"></textarea>
+                    <textarea class="form-control col-lg col-md-6 col-sm-7" placeholder="第一日曜日は休業。"></textarea>
                 </div>
 
             </div>
@@ -321,19 +329,19 @@
 
                 <h3 class="pt-3">月曜日</h3>
 
-                <div class="form-group col-1">
+                <div class="form-group col-lg-1">
                     <label class="control-label">開始時間</label>
-                    <input type="time" class="form-control">    
+                    <input type="time" class="form-control col-lg col-md-2 col-sm-3">    
                 </div>
 
-                <div class="form-group col-1">
+                <div class="form-group col-lg-1">
                     <label class="control-label">終了時間</label>
-                    <input type="time" class="form-control">     
+                    <input type="time" class="form-control col-lg col-md-2 col-sm-3">     
                 </div>
 
-                <div class="form-group col-5">
+                <div class="form-group col-lg-5">
                     <label class="control-label">補足</label>
-                    <textarea class="form-control" placeholder="第一月曜日は休業。"></textarea>
+                    <textarea class="form-control col-lg col-md-6 col-sm-7" placeholder="第一月曜日は休業。"></textarea>
                 </div>
 
             </div>
@@ -342,19 +350,19 @@
 
                 <h3 class="pt-3">火曜日</h3>
 
-                <div class="form-group col-1">
+                <div class="form-group col-lg-1">
                     <label class="control-label">開始時間</label>
-                    <input type="time" class="form-control">   
+                    <input type="time" class="form-control col-lg col-md-2 col-sm-3">   
                 </div>
 
-                <div class="form-group col-1">
+                <div class="form-group col-lg-1">
                     <label class="control-label">終了時間</label>
-                    <input type="time" class="form-control">     
+                    <input type="time" class="form-control col-lg col-md-2 col-sm-3">     
                 </div>
 
-                <div class="form-group col-5">
+                <div class="form-group col-lg-5">
                     <label class="control-label">補足</label>
-                    <textarea class="form-control" placeholder="第一火曜日は休業。"></textarea>
+                    <textarea class="form-control col-lg col-md-6 col-sm-7" placeholder="第一火曜日は休業。"></textarea>
                 </div>
 
             </div>
@@ -363,19 +371,19 @@
 
                 <h3 class="pt-3">水曜日</h3>
 
-                <div class="form-group col-1">
+                <div class="form-group col-lg-1">
                     <label class="control-label">開始時間</label>
-                    <input type="time" class="form-control">    
+                    <input type="time" class="form-control col-lg col-md-2 col-sm-3">    
                 </div>
 
-                <div class="form-group col-1">
+                <div class="form-group col-lg-1">
                     <label class="control-label">終了時間</label>
-                    <input type="time" class="form-control">     
+                    <input type="time" class="form-control col-lg col-md-2 col-sm-3">     
                 </div>
 
-                <div class="form-group col-5">
+                <div class="form-group col-lg-5">
                     <label class="control-label">補足</label>
-                    <textarea class="form-control" placeholder="第一水曜日は休業。"></textarea>
+                    <textarea class="form-control col-lg col-md-6 col-sm-7" placeholder="第一水曜日は休業。"></textarea>
                 </div>
 
             </div>
@@ -384,19 +392,19 @@
 
                 <h3 class="pt-3">木曜日</h3>
 
-                <div class="form-group col-1">
+                <div class="form-group col-lg-1">
                     <label class="control-label">開始時間</label>
-                    <input type="time" class="form-control">     
+                    <input type="time" class="form-control col-lg col-md-2 col-sm-3">     
                 </div>
 
-                <div class="form-group col-1">
+                <div class="form-group col-lg-1">
                     <label class="control-label">終了時間</label>
-                    <input type="time" class="form-control">      
+                    <input type="time" class="form-control col-lg col-md-2 col-sm-3">      
                 </div>
 
-                <div class="form-group col-5">
+                <div class="form-group col-lg-5">
                     <label class="control-label">補足</label>
-                    <textarea class="form-control" placeholder="第一木曜日は休業。"></textarea>
+                    <textarea class="form-control col-lg col-md-6 col-sm-7" placeholder="第一木曜日は休業。"></textarea>
                 </div>
 
             </div>
@@ -405,19 +413,19 @@
 
                 <h3 class="pt-3">金曜日</h3>
 
-                <div class="form-group col-1">
+                <div class="form-group col-lg-1">
                     <label class="control-label">開始時間</label>
-                    <input type="time" class="form-control">     
+                    <input type="time" class="form-control col-lg col-md-2 col-sm-3">     
                 </div>
 
-                <div class="form-group col-1">
+                <div class="form-group col-lg-1">
                     <label class="control-label">終了時間</label>
-                    <input type="time" class="form-control">     
+                    <input type="time" class="form-control col-lg col-md-2 col-sm-3">     
                 </div>
 
-                <div class="form-group col-5">
+                <div class="form-group col-lg-5">
                     <label class="control-label">補足</label>
-                    <textarea class="form-control" placeholder="第一金曜日は休業。"></textarea>
+                    <textarea class="form-control col-lg col-md-6 col-sm-7" placeholder="第一金曜日は休業。"></textarea>
                 </div>
 
             </div>
@@ -426,25 +434,25 @@
 
                 <h3 class="pt-3">土曜日</h3>
 
-                <div class="form-group col-1">
+                <div class="form-group col-lg-1">
                     <label class="control-label">開始時間</label>
-                    <input type="time" class="form-control">      
+                    <input type="time" class="form-control col-lg col-md-2 col-sm-3">
                 </div>
 
-                <div class="form-group col-1">
+                <div class="form-group col-lg-1">
                     <label class="control-label">終了時間</label>
-                    <input type="time" class="form-control">     
+                    <input type="time" class="form-control col-lg col-md-2 col-sm-3">     
                 </div>
 
-                <div class="form-group col-5">
+                <div class="form-group col-lg-5">
                     <label class="control-label">補足</label>
-                    <textarea class="form-control" placeholder="第一土曜日は休業。"></textarea>
+                    <textarea class="form-control col-lg col-md-6 col-sm-7" placeholder="第一土曜日は休業。"></textarea>
                 </div>
 
             </div>
 
             <div class="form-row form-trimmer">
-                <div class="form-group col-1">
+                <div class="form-group col-md-2 col-sm-3">
                     <label class="control-label">従業員数&ndash;人</label>
                     <input type="text" class="form-control" placeholder="20" maxlength="6">
                 </div>
