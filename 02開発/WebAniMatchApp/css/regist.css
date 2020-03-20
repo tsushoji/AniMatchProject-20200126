@@ -14,6 +14,10 @@ a {
     text-decoration:none;
 }
 
+.custom-radio-label:hover {
+    cursor:pointer;
+}
+
 /* 入力必須項目の必須マーク */
 .required-item::before {
     content:"必須";
