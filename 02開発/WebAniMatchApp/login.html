@@ -2,12 +2,47 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>index</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+
+    <!-- ビューポートの設定 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+
+    <title>ログイン</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="css/login.css" />
+
+    <script src="js/bootstrap/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
 </head>
-<body>
-    ログイン画面を作成してください。
+
+<body class="text-center d-flex flex-column justify-content-center py-5">
+
+    <form class="mx-auto py-5 form-signin">
+
+        <img class="mb-5" src="img/rogo/animatch.png" alt="Animatchロゴ">
+
+        <input type="text" class="form-control" placeholder="ユーザー名">
+        <input type="password" class="form-control" placeholder="パスワード">
+
+        <div class="checkbox my-2 text-left">
+            <label>
+              <input type="checkbox" value="1">
+              ユーザー名を保存する
+            </label>
+        </div>
+
+        <input type="submit" class="btn btn-primary form-control" value="ログイン">
+
+    </form>
+
+    <div class="footer-copyright mt-3 text-center">
+        copyright(c) 2020 AniMatch.
+        <div>
+            <a href="index.html">飼い主とトリマーを繋げるマッチングアプリ</a>
+        </div>
+    </div>
+
 </body>
 </html>
