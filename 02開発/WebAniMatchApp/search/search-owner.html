@@ -11,14 +11,20 @@
     <!-- bootstrap -->
     <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css" />
 
+    <!-- plugin multipicker -->
+    <link rel="stylesheet" type="text/css" href="../css/plugin/multipicker/multipicker.min.css">
+
     <link rel="stylesheet" href="../css/search.css" />
 
     <!-- bootstrap -->
     <script src="../js/bootstrap/jquery-3.4.1.min.js"></script>
     <script src="../js/bootstrap/bootstrap.min.js"></script>
 
+    <!-- plugin multipicker -->
+    <script src="../js/plugin/multipicker/multipicker.min.js"></script>
+
     <script src="../js/commons/pageMove.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="../js/search.js"></script>
 </head>
 <body>
 
@@ -74,17 +80,26 @@
                         </div>
 
                         <div class="col-8 pl-0">
-                            <input type="submit" class="btn btn-outline-primary p-1 main-search-left-header-btn" value="検索条件をクリア">
+                            <input type="submit" class="btn btn-outline-primary p-1 main-search-left-header-btn" id=main-search-left-header-btn-clear value="絞り込みをクリア">
                         </div>
 
                     </div>
 
                     <form>
 
+                        <div class="form-group mt-3">
+                            <label class="control-label">種別</label>
+                            <select name="type-pet" class="custom-select form-control">
+                                <option value="0">未選択</option>
+                                <option value="1">犬</option>
+                                <option value="2">猫</option>
+                            </select>
+                        </div>
+
                         <div class="form-group">
-                            <label class="control-label" for="prefectures">住所&ndash;都道府県</label>
+                            <label class="control-label" for="prefectures">お店&ndash;都道府県</label>
                             <select name="prefectures" id="prefectures" class="custom-select form-control">
-                                <option value="0">選んでください</option>
+                                <option value="0">未選択</option>
                                 <option value="1">北海道</option>
                                 <option value="2">青森県</option>
                                 <option value="3">岩手県</option>
@@ -136,64 +151,23 @@
                         </div>
   
                         <div class="form-group">
-                            <label class="control-label" for="cities">住所&ndash;市町村</label>
+                            <label class="control-label" for="cities">お店&ndash;市町村</label>
                             <input type="text" name="cities" id="cities" class="form-control" maxlength="6">      
                         </div>
 
-                        <div class="form-group">
-                            <label class="control-label">店名</label>
-                            <input type="text" class="form-control" placeholder="ペットサロン ヤマダ">
-                        </div>
-
-                        <p class="mb-1">営業日</p>
-
-                        <div class="form-check mb-1">
-                            <input class="form-check-input mt-0" type="checkbox" value="1" id="main-search-left-form-business-hours-1">
-                            <label class="form-check-label" for="main-search-left-form-business-hours-1">
-                                日曜
-                            </label>
-                        </div>
-
-                        <div class="form-check mb-1">
-                            <input class="form-check-input mt-0" type="checkbox" value="2" id="main-search-left-form-business-hours-2">
-                            <label class="form-check-label" for="main-search-left-form-business-hours-2">
-                                月曜
-                            </label>
-                        </div>
-
-                        <div class="form-check mb-1">
-                            <input class="form-check-input mt-0" type="checkbox" value="3" id="main-search-left-form-business-hours-3">
-                            <label class="form-check-label" for="main-search-left-form-business-hours-3">
-                                火曜
-                            </label>
-                        </div>
-
-                        <div class="form-check mb-1">
-                            <input class="form-check-input mt-0" type="checkbox" value="4" id="main-search-left-form-business-hours-4">
-                            <label class="form-check-label" for="main-search-left-form-business-hours-4">
-                                水曜
-                            </label>
-                        </div>
-
-                        <div class="form-check mb-1">
-                            <input class="form-check-input mt-0" type="checkbox" value="5" id="main-search-left-form-business-hours-5">
-                            <label class="form-check-label" for="main-search-left-form-business-hours-5">
-                                木曜
-                            </label>
-                        </div>
-
-                        <div class="form-check mb-1">
-                            <input class="form-check-input mt-0" type="checkbox" value="6" id="main-search-left-form-business-hours-6">
-                            <label class="form-check-label" for="main-search-left-form-business-hours-6">
-                                金曜
-                            </label>
-                        </div>
-
-                        <div class="form-check mb-3">
-                            <input class="form-check-input mt-0" type="checkbox" value="7" id="main-search-left-form-business-hours-7">
-                            <label class="form-check-label" for="main-search-left-form-business-hours-7">
-                                土曜
-                            </label>
+                        <div class="form-group form-trimmer">
+                            <label class="control-label">営業日</label>
+                            <div>
+                                <ul class="plugin-multipicker">
+                                    <li>日</li>
+                                    <li>月</li>
+                                    <li>火</li>
+                                    <li>水</li>
+                                    <li>木</li>
+                                    <li>金</li>
+                                    <li>土</li>
+                                </ul>
+                            </div>
                         </div>
 
                         <div class="form-group">
@@ -406,6 +380,18 @@
             <a href="../index.html">飼い主とトリマーを繋げるマッチングアプリ</a>
         </div>
     </footer>
+
+
+    <script>
+
+        $(document).ready(function(){
+            //plugin multipicker
+            $('.plugin-multipicker').multiPicker({
+                'selector' : 'li'
+            });
+        });
+    
+    </script>
 
 
 </body>

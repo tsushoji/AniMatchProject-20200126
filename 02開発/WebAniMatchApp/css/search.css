@@ -42,6 +42,10 @@ main {
     color:rgb(0, 0, 0);
 }
 
+.plugin-multipicker li {
+    color:rgb(0, 0, 0);
+}
+
 .page-link {
     color:rgb(0, 0, 0);
 }
