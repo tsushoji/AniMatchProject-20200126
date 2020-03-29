@@ -34,9 +34,6 @@
     <script type="text/javascript" src="js/bootstrap/bootstrap-datepicker.min.js"></script>
     <script type="text/javascript" src="js/locales/bootstrap-datepicker.ja.min.js"></script>
 
-    <!-- ajaxzip3 -->
-    <script type="text/javascript" src="js/ajaxzip3.github.io/ajaxzip3.js"></script>
-
     <!-- plugin dropify -->
     <script src="js/plugin/dropify/dropify.js"></script>
 
@@ -157,7 +154,7 @@
 
                 <div class="form-group col-md-3">
                     <label class="control-label required-item" for="postal-code">郵便番号</label>
-                    <input type="text" name="postal-code" class="form-control col-md col-sm-3" placeholder="9991234" maxlength="7" name="zip" onKeyUp="AjaxZip3.zip2addr('postal-code', '', 'prefectures', 'cities');" >
+                    <input type="text" name="postal-code" class="form-control col-md col-sm-3" placeholder="9991234" id="postal-code" maxlength="7">
                 </div>
 
                 <div class="form-group col-md-3 col-sm-5">
