@@ -22,7 +22,7 @@ a {
 
 /* メイン */
 main {
-    background-color:rgb(233, 233, 66); 
+    background-color:rgb(233, 233, 66);
 }
 
 .main-search-left,.main-search-right,.main-search-right-form, .main-search-right-list {
@@ -36,17 +36,23 @@ main {
     width:5%;
 }
 
-.main-search-left-header-btn {
-    font-size:0.12rem;
-    border-radius:15px;
-    color:rgb(0, 0, 0);
-}
-
 .plugin-multipicker li {
     color:rgb(0, 0, 0);
 }
 
 .page-link {
+    color:rgb(0, 0, 0);
+}
+
+.main-search-left-clear {
+    font-size:150%;
+}
+
+.main-search-left-clear:hover {
+    cursor:pointer;
+}
+
+.main-search-left-select-btn {
     color:rgb(0, 0, 0);
 }
 

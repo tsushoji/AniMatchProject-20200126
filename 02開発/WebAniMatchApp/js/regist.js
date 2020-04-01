@@ -27,8 +27,8 @@ $(document).ready(function(){
         }
       });
 
-      //アクション:「郵便番号」を入力する
-      $("#postal-code").change(function(){
+    //アクション:「郵便番号」を入力する
+    $("#postal-code").change(function(){
         const successStatus = 200
         let paramPostalCode = $(this).val();
         let urlZipCloud = 'https://zip-cloud.appspot.com/api/search?zipcode=';
@@ -38,37 +38,31 @@ $(document).ready(function(){
             cache: false,
             url: urlZipCloud + paramPostalCode,
             dataType: 'jsonp',
-            success: function (res) {
-                //結果によって処理を振り分ける
-                if (res.status === successStatus) {
-                    //処理が成功したとき
-                    //「都道府県」を表示
-                    let prefecturesLen = $('#prefectures option').length;
-
-                    let prefecturesVal = '0';
-                    for(var i=0; i<prefecturesLen; i++){
-                        if($('#prefectures option').eq(i).text() === res.results[0].address1){
-                            prefecturesVal = i;
-                            break;
-                        }
-                    }
-                    $('#prefectures').val(prefecturesVal);
-
-                    //「市区町村」を表示
-                    $('#cities').val(res.results[0].address2);
-
-                } else {
-                    //エラーだった時
-                    //エラー内容を表示
-                    console.log(res.message);
-                }
-            },
-            error: function (XMLHttpRequest, textStatus, errorThrown) {
-                console.log(XMLHttpRequest);
+        }).done(function (res) {
+            //エラーだった時
+            if (res.status !== successStatus) {
+                //エラー内容を表示
+                console.log(res.message);
+                return;
             }
-        });
+            //処理が成功したとき
+            //「都道府県」を表示
+            let prefecturesLen = $('#prefectures option').length;
+            let prefecturesVal = '0';
+            for(var i=0; i<prefecturesLen; i++){
+                if($('#prefectures option').eq(i).text() === res.results[0].address1){
+                    prefecturesVal = i;
+                    break;
+                }
+            }
+            $('#prefectures').val(prefecturesVal);
 
-      });
+            //「市区町村」を表示
+            $('#cities').val(res.results[0].address2);
+        }).fail(function (XMLHttpRequest, textStatus, errorThrown) {
+            console.log(XMLHttpRequest);
+        });
+    });
 
 
 });
