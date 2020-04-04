@@ -32,8 +32,8 @@ main {
 }
 
 .main-search-header-img {
-    height:auto;
-    width:5%;
+    height:100px;
+    width:100px;
 }
 
 .plugin-multipicker li {
@@ -63,4 +63,14 @@ footer {
 
 .footer-top {
     min-height:30px;
+}
+
+/*　画面サイズが1023pxまではここを読み込む　*/
+@media screen and (max-width:1023px) {
+    /* ヘッダー */
+    .main-search-header-img {
+        height:50px;
+        width:50px;
+    }
+
 }
