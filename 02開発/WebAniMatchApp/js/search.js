@@ -1,21 +1,12 @@
 $(document).ready(function(){
     //アクション:「絞り込みクリア」ボタン押下
     $('.main-search-left-clear').click(function() {
-        $(this).parents('.container-fluid')
-            .find('form select')
-            .val('0')
-        ;
+        let $form = $(this).parents('.container-fluid').find('.main-search-left-form');
+        $form.find('select').val('');
 
-        $(this).parents('.container-fluid')
-            .find('form input')
-            .not(':button, :submit, :reset, :hidden')
-            .val('')
-        ;
+        $form.find('input[name="form-start-time"],input[name="form-end-time"]').val('');
 
-        $(this).parents('.container-fluid')
-            .find('form ul li')
-            .removeClass('active')
-        ;
+        $form.find('ul li').removeClass('active');
     });
 
     //アクション:「都道府県」を入力する

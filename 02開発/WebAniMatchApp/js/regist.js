@@ -47,15 +47,8 @@ $(document).ready(function(){
             }
             //処理が成功したとき
             //「都道府県」を表示
-            let prefecturesLen = $('#prefectures option').length;
-            let prefecturesVal = '0';
-            for(var i=0; i<prefecturesLen; i++){
-                if($('#prefectures option').eq(i).text() === res.results[0].address1){
-                    prefecturesVal = i;
-                    break;
-                }
-            }
-            $('#prefectures').val(prefecturesVal);
+            $('#prefectures').val(res.results[0].prefcode);
+            console.log(res.results);
 
             //「市区町村」を表示
             $('#cities').val(res.results[0].address2);
