@@ -26,4 +26,36 @@ $(document).ready(function(){
             $('.form-common,.form-owner,.form-trimmer,.form-trimmer-business-hours,.footer-top-content').hide();
         }
       });
+
+    //アクション:「郵便番号」を入力する
+    $("#postal-code").change(function(){
+        const successStatus = 200
+        let paramPostalCode = $(this).val();
+        let urlZipCloud = 'https://zip-cloud.appspot.com/api/search?zipcode=';
+
+        $.ajax({
+            type: 'GET',
+            cache: false,
+            url: urlZipCloud + paramPostalCode,
+            dataType: 'jsonp',
+        }).done(function (res) {
+            //エラーだった時
+            if (res.status !== successStatus) {
+                //エラー内容を表示
+                console.log(res.message);
+                return;
+            }
+            //処理が成功したとき
+            //「都道府県」を表示
+            $('#prefectures').val(res.results[0].prefcode);
+            console.log(res.results);
+
+            //「市区町村」を表示
+            $('#cities').val(res.results[0].address2);
+        }).fail(function (XMLHttpRequest, textStatus, errorThrown) {
+            console.log(XMLHttpRequest);
+        });
+    });
+
+
 });
