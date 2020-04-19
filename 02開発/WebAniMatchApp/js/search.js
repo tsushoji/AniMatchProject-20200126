@@ -9,6 +9,18 @@ $(document).ready(function(){
         $form.find('ul li').removeClass('active');
     });
 
+    //アクション:「main-center-block」の検索ブロックをクリック
+    $('.is-show-details-owner').click(function () {
+        // 同じタグで表示
+        location.href = '../details/details-owner.html';
+    });
+
+    //アクション:「main-center-block」の検索ブロックをクリック
+    $('.is-show-details-trimmer').click(function () {
+        // 同じタグで表示
+        location.href = '../details/details-trimmer.html';
+    });
+
     //アクション:「都道府県」を入力する
     //後日課題
     // $("#prefectures").change(function(){
