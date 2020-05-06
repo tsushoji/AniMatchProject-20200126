@@ -1,0 +1,96 @@
+/* 全体 */
+body {
+    font-family:fantasy;
+    font-size:80%;
+    color:rgb(0, 0, 0);
+}
+
+.row {
+    margin-right:0;
+    margin-left:0;
+}
+
+img {
+    border:0;
+}
+
+a {
+    color:rgb(0, 0, 0);
+    text-decoration:none;
+}
+
+
+/* メイン */
+main {
+    background-color:rgb(255, 255, 200);
+    border-top:solid 1px rgb(163, 161, 161);
+    /* border-bottom:solid 1px rgb(163, 161, 161); */
+}
+
+.scrollarea::-webkit-scrollbar {
+    width:7px;
+}
+
+.scrollarea::-webkit-scrollbar-thumb {
+    background:rgb(255, 255, 255);
+    border-radius:10px;
+}
+
+.scrollarea::-webkit-scrollbar-track {
+    background: rgba(100,100,100, .5);
+}
+
+.main-left,.main-right {
+    font-size:85%;
+    height:957px;
+}
+
+.main-left {
+    border-right:solid 1px rgb(163, 161, 161);
+}
+
+.main-right {
+    border-left:solid 1px rgb(163, 161, 161);
+}
+
+.main-left-header-img {
+    width:80px;
+    height:80px;
+}
+
+.main-left-content {
+    height:720px;
+    overflow-y:auto;
+}
+
+.main-left-content-img {
+    width:50px;
+    height:50px;
+}
+
+.main-right-content-area {
+    height:850px;
+    overflow-y:auto;
+}
+
+.main-left-send-icon-camera,.main-left-send-icon-file,.main-left-send-icon-stamp,.main-left-send-icon-send:hover {
+    cursor:pointer;
+}
+
+.main-left-content-area-img {
+    width:80px;
+    height:80px;
+}
+
+.main-right-content-area-talk {
+    border:solid 1px rgb(163, 161, 161);
+    background-color:#78FF6C;
+    border-radius: 10px;
+    min-height: 30px;
+}
+
+.main-right-form-area {
+    bottom:0;
+    right:0;
+    width:70%;
+}
