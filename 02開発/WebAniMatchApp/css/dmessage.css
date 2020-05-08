@@ -98,20 +98,20 @@ main {
     border-top:solid 1px rgb(163, 161, 161);
 }
 
-#mydialog,.main-right-send-form {
+.main-right-send-icon-stamp-dialog,.main-right-send-form {
     display:none;
 }
 
-#mydialog {
-    top:630px;
+.main-right-send-icon-stamp-dialog {
     left:550px;
+    bottom:150px;
     position: relative; /* 三角の位置を固定するために設定 */
     width: 193px; /* 幅 */
     margin: 0 auto 40px; /* 上 左右 下のマージン */
     background: #ddd; /* 背景色 */
 }
 
-#mydialog::before {
+.main-right-send-icon-stamp-dialog::before {
     content: '';
     position: absolute; /* 位置固定 */
     bottom: -28px; /* 線幅の2倍 */
@@ -121,6 +121,11 @@ main {
     border-top-color: #ddd; /* 吹き出しの地と同じ色 */
 }
 
-#mydialog td {
+.main-right-send-icon-stamp-dialog td {
     cursor:pointer;
+}
+
+.main-right-send-icon-stamp-dialog-img {
+    height:100px;
+    width:100px;
 }
