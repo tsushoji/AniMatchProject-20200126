@@ -24,7 +24,6 @@ a {
 main {
     background-color:rgb(255, 255, 200);
     border-top:solid 1px rgb(163, 161, 161);
-    /* border-bottom:solid 1px rgb(163, 161, 161); */
 }
 
 .scrollarea::-webkit-scrollbar {
@@ -73,11 +72,11 @@ main {
     overflow-y:auto;
 }
 
-.main-left-send-icon-camera,.main-left-send-icon-file,.main-left-send-icon-stamp,.main-left-send-icon-send:hover {
+.main-right-send-icon-camera,.main-right-send-icon-file,.main-right-send-icon-stamp,.main-right-send-icon-send:hover {
     cursor:pointer;
 }
 
-.main-left-content-area-img {
+.main-right-content-area-img {
     width:80px;
     height:80px;
 }
@@ -93,4 +92,35 @@ main {
     bottom:0;
     right:0;
     width:70%;
+}
+
+.main-right-form-send-file-area {
+    border-top:solid 1px rgb(163, 161, 161);
+}
+
+#mydialog,.main-right-send-form {
+    display:none;
+}
+
+#mydialog {
+    top:630px;
+    left:550px;
+    position: relative; /* 三角の位置を固定するために設定 */
+    width: 193px; /* 幅 */
+    margin: 0 auto 40px; /* 上 左右 下のマージン */
+    background: #ddd; /* 背景色 */
+}
+
+#mydialog::before {
+    content: '';
+    position: absolute; /* 位置固定 */
+    bottom: -28px; /* 線幅の2倍 */
+    left: 50%;
+    margin-left: -14px; /* 線幅だけずらす */
+    border: 14px solid transparent; /* 線幅の設定 */
+    border-top-color: #ddd; /* 吹き出しの地と同じ色 */
+}
+
+#mydialog td {
+    cursor:pointer;
 }
