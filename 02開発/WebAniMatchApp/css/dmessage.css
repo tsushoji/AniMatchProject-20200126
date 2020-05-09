@@ -102,24 +102,24 @@ main {
     display:none;
 }
 
-.main-right-send-icon-stamp-dialog {
+/* .main-right-send-icon-stamp-dialog {
     left:550px;
     bottom:150px;
-    position: relative; /* 三角の位置を固定するために設定 */
-    width: 193px; /* 幅 */
-    margin: 0 auto 40px; /* 上 左右 下のマージン */
-    background: #ddd; /* 背景色 */
+    position: relative;
+    width: 193px;
+    margin: 0 auto 40px;
+    background: #ddd;
 }
 
 .main-right-send-icon-stamp-dialog::before {
     content: '';
-    position: absolute; /* 位置固定 */
-    bottom: -28px; /* 線幅の2倍 */
+    position: absolute;
+    bottom: -28px;
     left: 50%;
-    margin-left: -14px; /* 線幅だけずらす */
-    border: 14px solid transparent; /* 線幅の設定 */
-    border-top-color: #ddd; /* 吹き出しの地と同じ色 */
-}
+    margin-left: -14px;
+    border: 14px solid transparent;
+    border-top-color: #ddd;
+} */
 
 .main-right-send-icon-stamp-dialog td {
     cursor:pointer;

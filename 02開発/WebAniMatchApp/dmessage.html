@@ -15,6 +15,7 @@
 
     <!-- bootstrap -->
     <script src="js/bootstrap/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="js/bootstrap/bootstrap.min.js"></script>
 
     <script src="js/dmessage.js"></script>
@@ -309,7 +310,7 @@
                     </div>
 
                     <!-- スタンプダイアログボックス -->
-                    <div class="main-right-send-icon-stamp-dialog">
+                    <!-- <div class="main-right-send-icon-stamp-dialog">
 
                         <table>
 
@@ -411,7 +412,9 @@
 
                         </table>
 
-                    </div>
+                    </div> -->
+
+                    <div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>
 
                     <div class="row position-fixed main-right-form-area">
 
@@ -423,8 +426,11 @@
 
                             <img src="img/icon/send.png" alt="メッセージアイコン" class="mr-1 main-right-send-icon-send">
 
-                            <img src="img/icon/stamp.png" alt="スタンプアイコン" class="mr-1 main-right-send-icon-stamp">
+                            <!-- <img src="img/icon/stamp.png" alt="スタンプアイコン" class="mr-1 main-right-send-icon-stamp"> -->
 
+                            <a data-toggle="tooltip" data-placement="top" data-html="true" title='スタンプ'>
+                                <img src="img/icon/stamp.png" alt="スタンプアイコン" class="mr-1 main-right-send-icon-stamp">
+                            </a>
                             <!-- 隠しタグ -->
                             <input type="file" accept=".jpg,.jpeg,.png,.gif" class="main-right-send-form"/>
 

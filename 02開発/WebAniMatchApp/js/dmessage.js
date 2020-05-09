@@ -86,10 +86,118 @@ $(document).ready(function(){
     });
 
     //アクション:入力フォームの「スタンプ画像」をクリック
-    $('.main-right-send-icon-stamp').click(function(){
-        // ダイアログの表示・非表示処理
-        $('.main-right-send-icon-stamp-dialog').toggle();
-    });
+    // $('.main-right-send-icon-stamp').click(function(){
+    //     // ダイアログの表示・非表示処理
+    //     $('.main-right-send-icon-stamp-dialog').toggle();
+    // });
+
+    //アクション:入力フォームの「スタンプ画像」をクリック
+    $('[data-toggle="tooltip"]').tooltip(
+        // {
+        // content:'
+
+        //     <table>
+
+        //         <tr>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //         </tr>
+
+        //         <tr>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //         </tr>
+
+        //         <tr>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //         </tr>
+
+        //         <tr>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //         </tr>
+
+        //         <tr>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //         </tr>
+
+        //         <tr>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //             <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
+
+        //         </tr>
+
+        //     </table>'
+        // }
+
+    );
 
     //アクション:スタンプダイアログの「スタンプ画像」をクリック
     $('.main-right-send-icon-stamp-dialog td img').click(function(){
