@@ -1,5 +1,13 @@
 $(document).ready(function(){
 
+    // contact-inf.html
+    //アクション:連絡先のアカウントブロック部分をクリック
+    $('.main-center-content-account-block').click(function () {
+        // 別タグで表示
+        window.open('message.html');
+
+    });
+
     //アクション:入力フォームの「メッセージ画像」をクリック
     $('.main-right-send-icon-send').click(function () {
         //入力フォームの内容取得
