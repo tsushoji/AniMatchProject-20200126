@@ -19,13 +19,6 @@ a {
     text-decoration:none;
 }
 
-
-/* メイン */
-main {
-    background-color:rgb(255, 255, 200);
-    border-top:solid 1px rgb(163, 161, 161);
-}
-
 .scrollarea::-webkit-scrollbar {
     width:7px;
 }
@@ -39,32 +32,53 @@ main {
     background: rgba(100,100,100, .5);
 }
 
-.main-left,.main-right {
-    font-size:85%;
-    height:957px;
+
+/* contact-inf.html */
+/* ヘッダー */
+.nav-item-account-img {
+    width:60px;
+    height:60px;
 }
 
-.main-left {
+/* メイン */
+main {
+    background-color:rgb(255, 255, 200);
+    border-top:solid 1px rgb(163, 161, 161);
+}
+
+.main-center-block {
     border-right:solid 1px rgb(163, 161, 161);
+    border-left:solid 1px rgb(163, 161, 161);
+    height:calc(100vh - 98px);
+    overflow-y:scroll;
+}
+
+.main-center-content-header {
+    background:linear-gradient(transparent 50%, yellow 50%);
+    font-size:1.6rem;
+}
+
+.main-center-content-account-block {
+    cursor:pointer;
+}
+
+.main-center-content-account-img {
+    width:50px;
+    height:50px;
+}
+
+.main-center-content-account-name {
+    font-size:1.6rem;
+}
+
+/* message.html */
+.main-right {
+    font-size:85%;
+    height:650px;
 }
 
 .main-right {
     border-left:solid 1px rgb(163, 161, 161);
-}
-
-.main-left-header-img {
-    width:80px;
-    height:80px;
-}
-
-.main-left-content {
-    height:720px;
-    overflow-y:auto;
-}
-
-.main-left-content-img {
-    width:50px;
-    height:50px;
 }
 
 .main-right-content-area {
@@ -89,7 +103,7 @@ main {
 }
 
 .main-right-form-area {
-    bottom:0;
+    bottom:60px;
     right:0;
     width:70%;
 }
@@ -98,34 +112,34 @@ main {
     border-top:solid 1px rgb(163, 161, 161);
 }
 
-.main-right-send-icon-stamp-dialog,.main-right-send-form {
+.main-right-send-icon-stamp-form,.main-right-send-form {
     display:none;
-}
-
-.main-right-send-icon-stamp-dialog {
-    left:550px;
-    bottom:150px;
-    position: relative; /* 三角の位置を固定するために設定 */
-    width: 193px; /* 幅 */
-    margin: 0 auto 40px; /* 上 左右 下のマージン */
-    background: #ddd; /* 背景色 */
-}
-
-.main-right-send-icon-stamp-dialog::before {
-    content: '';
-    position: absolute; /* 位置固定 */
-    bottom: -28px; /* 線幅の2倍 */
-    left: 50%;
-    margin-left: -14px; /* 線幅だけずらす */
-    border: 14px solid transparent; /* 線幅の設定 */
-    border-top-color: #ddd; /* 吹き出しの地と同じ色 */
-}
-
-.main-right-send-icon-stamp-dialog td {
-    cursor:pointer;
 }
 
 .main-right-send-icon-stamp-dialog-img {
     height:100px;
     width:100px;
+}
+
+/*　画面サイズが1279pxまではここを読み込む　*/
+@media screen and (max-width:1279px) {
+    /* message.html */
+
+}
+
+/*　画面サイズが959pxまではここを読み込む　*/
+@media screen and (max-width:959px) {
+    /* message.html */
+
+}
+
+/*　画面サイズが599pxまではここを読み込む　*/
+@media screen and (max-width:599px) {
+    /* message.html */
+
+}
+/*　画面サイズが479pxまではここを読み込む　*/
+@media screen and (max-width:479px) {
+    /* message.html */
+
 }
