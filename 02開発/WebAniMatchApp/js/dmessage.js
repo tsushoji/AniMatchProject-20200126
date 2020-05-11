@@ -8,6 +8,7 @@ $(document).ready(function(){
 
     });
 
+    // message.html
     //アクション:入力フォームの「メッセージ画像」をクリック
     $('.main-right-send-icon-send').click(function () {
         //入力フォームの内容取得
