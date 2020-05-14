@@ -15,8 +15,6 @@
 
     <!-- bootstrap -->
     <script src="../js/bootstrap/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../js/bootstrap/bootstrap.min.js"></script>
 
     <script src="../js/dmessage.js"></script>
@@ -38,9 +36,9 @@
             </button>
 
             <div class="collapse navbar-collapse collapse-item" id="navbar-supported-content">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item"><a class="nav-link" href="../search/search-owner.html">お店を探す<img src="../img/icon/search.png" alt="検索アイコン"></a></li>
-                    <li class="nav-item"><a class="nav-link" href="../search/search-trimmer.html">飼い主を探す<img src="../img/icon/search.png" alt="検索アイコン"></a></li>
+                <ul class="navbar-nav ml-auto mr-3">
+                    <li class="nav-item"><img src="../img/dmessage/sample_20200501.jpg" alt="自己アカウント画像" class="rounded-circle nav-item-account-img"></li>
+                    <li class="nav-item"><p class="pl-1 pt-3">アカウント名</p></li>
                 </ul>
             </div>
 
@@ -51,408 +49,82 @@
     <!--メイン-->
     <main>
 
-        <!--グリッドシステム-->
-        <div class="container-fluid px-0">
-            <div class="row">
+        <div>
 
-                <div class="col-3 main-left px-0">
+            <div id="chat-frame">
 
-                    <div class="row mt-2">
+                <p class="chat-talk">
 
-                        <div class="col-3">
-                            <img src="../img/dmessage/sample_20200501.jpg" alt="自己アカウント画像" class="rounded-circle main-left-header-img">
-                        </div>
+                    <span class="talk-icon">
+                        <img src="../img/dmessage/sample_20200501.jpg" alt="相手アカウント画像"/>
+                    </span>
 
-                        <div class="col-8">
-                            <h1>チャット</h1>
-                        </div>
+                    <span class="talk-content">ありがとうございます。</span>
 
-                    </div>
+                </p>
 
-                    <div class="row">
+                <p class="chat-talk mytalk">
 
-                        <div class="input-group my-3 col-11">
-                            <input type="text" class="form-control" placeholder="連絡先を検索">
-                            <span class="input-group-btn">
-                                <button type="button" class="btn btn-outline-primary"><img src="../img/icon/search.png" alt="検索アイコン"></button>
-                            </span>
-                        </div>
+                    <span class="talk-icon">
+                        <img src="../img/dmessage/sample_20200501.jpg" alt="自分アカウント画像"/>
+                    </span>
 
-                    </div>
+                    <span class="talk-content">どういたしまして。</span>
 
-                    <h5 class="pl-3">連絡先</h5>
+                </p>
 
-                    <div class="main-left-content scrollarea">
+            </div>
 
-                        <div class="row mb-4">
+        </div>
 
-                            <div class="col-2">
-                                <img src="../img/dmessage/sample_20200501.jpg" alt="友達アカウント画像" class="rounded-circle main-left-content-img">
-                            </div>
+    </main>
 
-                            <div class="col-6">
-                                <h5 class="mb-0 pt-2">友達アカウント名</h5>
-                            </div>
 
-                        </div>
+    <footer>
 
-                        <div class="row mb-4">
+        <!-- 隠しタグ -->
+        <div class="message-form-send-file-area">
 
-                            <div class="col-2">
-                                <img src="../img/dmessage/sample_20200501.jpg" alt="友達アカウント画像" class="rounded-circle main-left-content-img">
-                            </div>
+            <div class="d-flex">
 
-                            <div class="col-6">
-                                <h5 class="mb-0 pt-2">友達アカウント名</h5>
-                            </div>
-
-                        </div>
-
-                        <div class="row mb-4">
-
-                            <div class="col-2">
-                                <img src="../img/dmessage/sample_20200501.jpg" alt="友達アカウント画像" class="rounded-circle main-left-content-img">
-                            </div>
-
-                            <div class="col-6">
-                                <h5 class="mb-0 pt-2">友達アカウント名</h5>
-                            </div>
-
-                        </div>
-
-                        <div class="row mb-4">
-
-                            <div class="col-2">
-                                <img src="../img/dmessage/sample_20200501.jpg" alt="友達アカウント画像" class="rounded-circle main-left-content-img">
-                            </div>
-
-                            <div class="col-6">
-                                <h5 class="mb-0 pt-2">友達アカウント名</h5>
-                            </div>
-
-                        </div>
-
-                        <div class="row mb-4">
-
-                            <div class="col-2">
-                                <img src="../img/dmessage/sample_20200501.jpg" alt="友達アカウント画像" class="rounded-circle main-left-content-img">
-                            </div>
-
-                            <div class="col-6">
-                                <h5 class="mb-0 pt-2">友達アカウント名</h5>
-                            </div>
-
-                        </div>
-
-                        <div class="row mb-4">
-
-                            <div class="col-2">
-                                <img src="../img/dmessage/sample_20200501.jpg" alt="友達アカウント画像" class="rounded-circle main-left-content-img">
-                            </div>
-
-                            <div class="col-6">
-                                <h5 class="mb-0 pt-2">友達アカウント名</h5>
-                            </div>
-
-                        </div>
-
-                        <div class="row mb-4">
-
-                            <div class="col-2">
-                                <img src="../img/dmessage/sample_20200501.jpg" alt="友達アカウント画像" class="rounded-circle main-left-content-img">
-                            </div>
-
-                            <div class="col-6">
-                                <h5 class="mb-0 pt-2">友達アカウント名</h5>
-                            </div>
-
-                        </div>
-
-                        <div class="row mb-4">
-
-                            <div class="col-2">
-                                <img src="../img/dmessage/sample_20200501.jpg" alt="友達アカウント画像" class="rounded-circle main-left-content-img">
-                            </div>
-
-                            <div class="col-6">
-                                <h5 class="mb-0 pt-2">友達アカウント名</h5>
-                            </div>
-
-                        </div>
-
-                        <div class="row mb-4">
-
-                            <div class="col-2">
-                                <img src="../img/dmessage/sample_20200501.jpg" alt="友達アカウント画像" class="rounded-circle main-left-content-img">
-                            </div>
-
-                            <div class="col-6">
-                                <h5 class="mb-0 pt-2">友達アカウント名</h5>
-                            </div>
-
-                        </div>
-
-                        <div class="row mb-4">
-
-                            <div class="col-2">
-                                <img src="../img/dmessage/sample_20200501.jpg" alt="友達アカウント画像" class="rounded-circle main-left-content-img">
-                            </div>
-
-                            <div class="col-6">
-                                <h5 class="mb-0 pt-2">友達アカウント名</h5>
-                            </div>
-
-                        </div>
-
-                        <div class="row mb-4">
-
-                            <div class="col-2">
-                                <img src="../img/dmessage/sample_20200501.jpg" alt="友達アカウント画像" class="rounded-circle main-left-content-img">
-                            </div>
-
-                            <div class="col-6">
-                                <h5 class="mb-0 pt-2">友達アカウント名</h5>
-                            </div>
-
-                        </div>
-
-                        <div class="row mb-4">
-
-                            <div class="col-2">
-                                <img src="../img/dmessage/sample_20200501.jpg" alt="友達アカウント画像" class="rounded-circle main-left-content-img">
-                            </div>
-
-                            <div class="col-6">
-                                <h5 class="mb-0 pt-2">友達アカウント名</h5>
-                            </div>
-
-                        </div>
-
-                        <div class="row mb-4">
-
-                            <div class="col-2">
-                                <img src="../img/dmessage/sample_20200501.jpg" alt="友達アカウント画像" class="rounded-circle main-left-content-img">
-                            </div>
-
-                            <div class="col-6">
-                                <h5 class="mb-0 pt-2">友達アカウント名</h5>
-                            </div>
-
-                        </div>
-
-                        <div class="row mb-4">
-
-                            <div class="col-2">
-                                <img src="../img/dmessage/sample_20200501.jpg" alt="友達アカウント画像" class="rounded-circle main-left-content-img">
-                            </div>
-
-                            <div class="col-6">
-                                <h5 class="mb-0 pt-2">友達アカウント名</h5>
-                            </div>
-
-                        </div>
-
-                        <div class="row mb-4">
-
-                            <div class="col-2">
-                                <img src="../img/dmessage/sample_20200501.jpg" alt="友達アカウント画像" class="rounded-circle main-left-content-img">
-                            </div>
-
-                            <div class="col-6">
-                                <h5 class="mb-0 pt-2">友達アカウント名</h5>
-                            </div>
-
-                        </div>
-
-                        <div class="row mb-4">
-
-                            <div class="col-2">
-                                <img src="../img/dmessage/sample_20200501.jpg" alt="友達アカウント画像" class="rounded-circle main-left-content-img">
-                            </div>
-
-                            <div class="col-6">
-                                <h5 class="mb-0 pt-2">友達アカウント名</h5>
-                            </div>
-
-                        </div>
-
-                        <div class="row mb-4">
-
-                            <div class="col-2">
-                                <img src="../img/dmessage/sample_20200501.jpg" alt="友達アカウント画像" class="rounded-circle main-left-content-img">
-                            </div>
-
-                            <div class="col-6">
-                                <h5 class="mb-0 pt-2">友達アカウント名</h5>
-                            </div>
-
-                        </div>
-
-                        <div class="row mb-4">
-
-                            <div class="col-2">
-                                <img src="../img/dmessage/sample_20200501.jpg" alt="友達アカウント画像" class="rounded-circle main-left-content-img">
-                            </div>
-
-                            <div class="col-6">
-                                <h5 class="mb-0 pt-2">友達アカウント名</h5>
-                            </div>
-
-                        </div>
-
-                    </div>
-
+                <div>
+                    <img src="../img/icon/file_area.png" alt="添付済みファイルアイコン" class="message-form-send-file-area-img">
                 </div>
 
-                <div class="col-9 px-0 main-right">
-
-                    <div class="main-right-content-area scrollarea">
-
-                    </div>
-
-                    <!-- スタンプダイアログボックス -->
-                    <!-- <div class="main-right-send-icon-stamp-dialog">
-
-                        <table>
-
-                            <tr>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                            </tr>
-
-                            <tr>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                            </tr>
-
-                            <tr>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                            </tr>
-
-                            <tr>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                            </tr>
-
-                            <tr>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                            </tr>
-
-                            <tr>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                                <td><img src="img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></td>
-
-                            </tr>
-
-                        </table>
-
-                    </div> -->
-
-                    <div class="row position-fixed main-right-form-area">
-
-                        <div class="form-group col-10 pl-0">
-                            <textarea class="form-control main-right-send-content" rows="1" placeholder="メッセージを入力"></textarea>
-                        </div>
-
-                        <div class="col-2 pl-0">
-
-                            <img src="../img/icon/send.png" alt="メッセージアイコン" class="mr-1 main-right-send-icon-send">
-
-                            <img src="../img/icon/stamp.png" alt="スタンプアイコン" class="mr-1 main-right-send-icon-stamp">
-
-                            <!-- 隠しタグ -->
-                            <input type="file" accept=".jpg,.jpeg,.png,.gif" class="main-right-send-form"/>
-
-                            <img src="../img/icon/file.png" alt="ファイル添付アイコン" class="main-right-send-icon-file">
-
-                        </div>
-
-                        <div class="col-12 pl-0 main-right-send-icon-stamp-form">
-	                        <div class="">
-	                        	<span class="border"><img src="../img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></span>
-	                        	<span class="border"><img src="../img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></span>
-	                        	<span class="border"><img src="../img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></span>
-	                        	<span class="border"><img src="../img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></span>
-	                        	<span class="border"><img src="../img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></span>
-	                        	<span class="border"><img src="../img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字"></span>
-	                        </div>
-
-                        </div>
-
-                    </div>
+                <div class="my-auto message-form-send-file-area-name">
 
                 </div>
 
             </div>
+
         </div>
-    </main>
+
+        <div class="message-form-block">
+
+            <textarea class="message-form-area" rows="2" placeholder="メッセージを入力"></textarea>
+
+            <img src="../img/icon/send.png" alt="メッセージアイコン" class="align-top message-form-send-icon-send ml-2">
+
+            <!-- 隠しタグ -->
+            <input type="file" accept=".jpg,.jpeg,.png,.gif" class="message-form-send-file"/>
+            <img src="../img/icon/stamp.png" alt="スタンプアイコン" class="align-top message-form-send-icon-stamp">
+
+            <img src="../img/icon/file_form.png" alt="ファイル添付アイコン" class="align-top message-form-send-icon-file">
+
+        </div>
+
+        <!-- 隠しタグ -->
+        <div class="message-form-send-stamp-area">
+
+            <span class="border"><img src="../img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字" class="message-form-send-stamp-area-img"></span>
+            <span class="border"><img src="../img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字" class="message-form-send-stamp-area-img"></span>
+            <span class="border"><img src="../img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字" class="message-form-send-stamp-area-img"></span>
+            <span class="border"><img src="../img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字" class="message-form-send-stamp-area-img"></span>
+            <span class="border"><img src="../img/dmessage/dmessage_pictograph/sample_pictograph_01.PNG" alt="スタンプ絵文字" class="message-form-send-stamp-area-img"></span>
+
+        </div>
+
+    </footer>
 
 
 </body>

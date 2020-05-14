@@ -10,29 +10,27 @@ $(document).ready(function(){
 
     // message.html
     //アクション:入力フォームの「メッセージ画像」をクリック
-    $('.main-right-send-icon-send').click(function () {
+    $('.message-form-send-icon-send').click(function () {
         //入力フォームの内容取得
         //メッセージの入力値取得
-        let inputMsg = $('.main-right-send-content').val();
+        let inputMsg = $('.message-form-area').val();
         //添付したファイルオブジェクトを取得
-        let inputFile = $('.main-right-send-form')[0].files[0];
+        let inputFile = $('.message-form-send-file')[0].files[0];
         //上記で取得した値が空白の場合、メッセージを出力しない
         if(inputMsg){
             //追加するタグを「addEleMsg」にセット
-            let addEleMsg = '<div class="row my-4">';
-            addEleMsg += '<div class="col-1 offset-6 pr-0">';
-            addEleMsg += '<img src="../img/dmessage/sample_20200501.jpg" alt="友達アカウント画像" class="rounded-circle main-right-content-area-img">';
-            addEleMsg += '</div>';
-            addEleMsg += '<div class="col-5 pl-0">';
-            addEleMsg += '<p class="mb-0 mt-4 p-1 main-right-content-area-talk">';
+            let addEleMsg = '<p class="chat-talk mytalk">';
+            addEleMsg += '<span class="talk-icon">';
+            addEleMsg += '<img src="../img/dmessage/sample_20200501.jpg" alt="相手アカウント画像"/>';
+            addEleMsg += '</span>';
+            addEleMsg += '<span class="talk-content">';
             addEleMsg += inputMsg;
+            addEleMsg += '</span>';
             addEleMsg += '</p>';
-            addEleMsg += '</div>';
-            addEleMsg += '</div>';
             //タグを追加する
-            $('.main-right-content-area').append(addEleMsg);
+            $('#chat-frame').append(addEleMsg);
             //入力したメッセージを初期化
-            $('.main-right-send-content').val('');
+            $('.message-form-area').val('');
 
         }
 
@@ -40,20 +38,18 @@ $(document).ready(function(){
             //添付したファイル名を取得
             let inputFileName = inputFile.name;
             //追加するタグを「addEleFile」にセット
-            let addEleFile = '<div class="row my-4">';
-            addEleFile += '<div class="col-1 offset-6 pr-0">';
-            addEleFile += '<img src="../img/dmessage/sample_20200501.jpg" alt="友達アカウント画像" class="rounded-circle main-right-content-area-img">';
-            addEleFile += '</div>';
-            addEleFile += '<div class="col-5 pl-0">';
-            addEleFile += '<p class="mb-0 mt-4 p-1 main-right-content-area-talk">';
+            let addEleFile = '<p class="chat-talk mytalk">';
+            addEleFile += '<span class="talk-icon">';
+            addEleFile += '<img src="../img/dmessage/sample_20200501.jpg" alt="相手アカウント画像"/>';
+            addEleFile += '</span>';
+            addEleFile += '<span class="talk-content" id="talk-content-file">';
             addEleFile += inputFileName;
+            addEleFile += '</span>';
             addEleFile += '</p>';
-            addEleFile += '</div>';
-            addEleFile += '</div>';
             //タグを追加する
-            $('.main-right-content-area').append(addEleFile);
-            //入力フォームに追加したタグを削除
-            $('.main-right-form-send-file-area').remove();
+            $('#chat-frame').append(addEleFile);
+            //添付済みファイルエリアを非表示
+            $('.message-form-send-file-area').hide();
 
         }
 
@@ -61,64 +57,56 @@ $(document).ready(function(){
     });
 
     //アクション:入力フォームの「ファイル画像」をクリック
-    $('.main-right-send-icon-file').click(function () {
+    $('.message-form-send-icon-file').click(function () {
         // ファイルダイアログを表示する
-        $('.main-right-send-form').click();
+        $('.message-form-send-file').click();
         return false;
 
     });
 
     //アクション:「ファイル添付」タグの属性が変更された場合
-    $('.main-right-send-form').change(function () {
+    $('.message-form-send-file').change(function () {
         // 選択されたファイル名を取得する
         if($(this)[0].files[0]){
             const fileName = $(this)[0].files[0].name;
             //上記で取得した値が空白の場合、メッセージを出力しない
             if(fileName){
-                //追加するタグを「addEle」にセット
-                let addEleFile = '<div class="row main-right-form-send-file-area">';
-                addEleFile += '<div class="col-3 px-0">';
-                addEleFile += '<h5>添付ファイル名</h5>';
-                addEleFile += '<p class="file-name">';
-                addEleFile += fileName;
-                addEleFile += '</p>';
-                addEleFile += '</div>';
-                addEleFile += '</div>';
-                //タグを追加する
-                $('.main-right-content-area').after(addEleFile);
+                //添付済みファイルエリアを表示
+                $('.message-form-send-file-area').show();
+                //添付済みファイルエリアのファイル名に添付ファイル名をセット
+                $('.message-form-send-file-area-name').text(fileName);
 
             }
         }else{
-            //追加するタグを削除
-            $('.main-right-form-send-file-area').remove();
+            //添付済みファイルエリアを非表示
+            $('.message-form-send-file-area').hide();
         }
     });
 
     //アクション:入力フォームの「スタンプ画像」をクリック
-    $('.main-right-send-icon-stamp').click(function(){
+    $('.message-form-send-icon-stamp').click(function(){
         // ダイアログの表示・非表示処理
-        $('.main-right-send-icon-stamp-form').show();
+        $('.message-form-send-stamp-area').show();
     });
 
     //アクション:スタンプダイアログの「スタンプ画像」をクリック
-    $('.main-right-send-icon-stamp-dialog td img').click(function(){
+    $('.message-form-send-stamp-area-img').click(function(){
         //スタンプのURL取得
-        let inputStmpUrl = $('.main-right-send-icon-stamp-dialog td img').attr('src');
-        console.log(inputStmpUrl);
+        let inputStmpUrl = $('.message-form-send-stamp-area-img').attr('src');
         //追加するタグを「addEleFile」にセット
         if(inputStmpUrl){
-            let addEleStmp = '<div class="row my-4">';
-            addEleStmp += '<div class="col-1 offset-6 pr-0">';
-            addEleStmp += '<img src="../img/dmessage/sample_20200501.jpg" alt="友達アカウント画像" class="rounded-circle main-right-content-area-img">';
-            addEleStmp += '</div>';
-            addEleStmp += '<div class="col-5 pl-0">';
+            let addEleStmp = '<p class="chat-talk mytalk">';
+            addEleStmp += '<span class="talk-icon">';
+            addEleStmp += '<img src="../img/dmessage/sample_20200501.jpg" alt="相手アカウント画像"/>';
+            addEleStmp += '</span>';
+            addEleStmp += '<span class="talk-content-stamp">';
             addEleStmp += '<img src="';
             addEleStmp += inputStmpUrl;
-            addEleStmp += '" alt="スタンプ絵文字" class="main-right-send-icon-stamp-dialog-img">';
-            addEleStmp += '</div>';
-            addEleStmp += '</div>';
+            addEleStmp += '" alt="スタンプ絵文字" class="message-form-send-icon-stamp-dialog-img">';
+            addEleStmp += '</span>';
+            addEleStmp += '</p>';
             //タグを追加する
-            $('.main-right-content-area').append(addEleStmp);
+            $('#chat-frame').append(addEleStmp);
         }
     });
 
