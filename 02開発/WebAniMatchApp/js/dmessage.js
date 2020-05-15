@@ -13,7 +13,7 @@ $(document).ready(function(){
     $('.message-form-send-icon-send').click(function () {
         //入力フォームの内容取得
         //メッセージの入力値取得
-        let inputMsg = $('.message-form-area').val();
+        let inputMsg = $('.message-form-area').val().replace(/\r?\n/g,"<br/>");
         //添付したファイルオブジェクトを取得
         let inputFile = $('.message-form-send-file')[0].files[0];
         //上記で取得した値が空白の場合、メッセージを出力しない
