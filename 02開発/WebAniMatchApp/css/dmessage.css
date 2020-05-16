@@ -66,7 +66,7 @@ footer {
 /* message.html */
 /* メイン */
 .main-block {
-    height:calc(100vh - 173px);
+    height:calc(100vh - 170px);
     /* スタンプエリア考慮 */
     /* height:calc(100vh - 340px); */
     /* スタンプエリア、添付エリア考慮 */
@@ -179,6 +179,10 @@ footer {
     width:85%;
 }
 
+.message-form-btn {
+    min-width:110px;
+}
+
 .message-form-send-icon-send:hover,.message-form-send-icon-stamp:hover,.message-form-send-icon-file:hover {
     cursor:pointer;
     background-color:rgb(255, 255, 0);
@@ -212,7 +216,5 @@ footer {
 /*　画面サイズが479pxまではここを読み込む　*/
 @media screen and (max-width:479px) {
     /* message.html */
-    .message-form-block {
-        width:60%;
-    }
+
 }
