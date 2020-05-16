@@ -50,7 +50,10 @@ $(document).ready(function(){
             $('#chat-frame').append(addEleFile);
             //添付済みファイルエリアを非表示
             $('.message-form-send-file-area').hide();
-
+            //「file.name」のクリア
+            $('.message-form-send-file').after('<input type="file" accept=".jpg,.jpeg,.png,.gif" class="message-form-send-new-file"/>');
+            $('.message-form-send-file').remove();
+            $('.message-form-send-new-file').attr('class','message-form-send-file');
         }
 
 
@@ -60,22 +63,28 @@ $(document).ready(function(){
     $('.message-form-send-icon-file').click(function () {
         // ファイルダイアログを表示する
         $('.message-form-send-file').click();
+        console.log($('.message-form-send-file'));
         return false;
 
     });
 
     //アクション:「ファイル添付」タグの属性が変更された場合
-    $('.message-form-send-file').change(function () {
+    //file.name初期化で新しく作成した動的な要素に対してもイベントを発生させたいため、「on()」を使用
+    $('.footer-block').on('change','.message-form-send-file',function () {
+        alert('ファイル添付1');
         // 選択されたファイル名を取得する
         if($(this)[0].files[0]){
-            const fileName = $(this)[0].files[0].name;
+            let fileName = $(this)[0].files[0].name;
             //上記で取得した値が空白の場合、メッセージを出力しない
             if(fileName){
+                //「スタンプ画像」ダイアログを非表示
+                $('.message-form-send-stamp-area').hide();
                 //添付済みファイルエリアを表示
                 $('.message-form-send-file-area').show();
+                // スクロールバーを下部に表示
+                $('html').animate({scrollTop:1000}, 10, "swing");
                 //添付済みファイルエリアのファイル名に添付ファイル名をセット
                 $('.message-form-send-file-area-name').text(fileName);
-
             }
         }else{
             //添付済みファイルエリアを非表示
@@ -86,7 +95,23 @@ $(document).ready(function(){
     //アクション:入力フォームの「スタンプ画像」をクリック
     $('.message-form-send-icon-stamp').click(function(){
         // ダイアログの表示・非表示処理
-        $('.message-form-send-stamp-area').show();
+        $('.message-form-send-stamp-area').toggle();
+        // スクロールバーを下部に表示
+        $('html').animate({scrollTop:1000}, 10, "swing");
+        // 選択されたファイル名を取得する
+        if($('.message-form-send-file')[0].files[0]){
+            let fileName = $('.message-form-send-file')[0].files[0].name;
+            //上記で取得した値が空白でない場合
+            if(fileName){
+                //添付済みファイルエリアを非表示
+                $('.message-form-send-file-area').hide();
+                //「file.name」のクリア
+                $('.message-form-send-file').after('<input type="file" accept=".jpg,.jpeg,.png,.gif" class="message-form-send-new-file"/>');
+                $('.message-form-send-file').remove();
+                $('.message-form-send-new-file').attr('class','message-form-send-file');
+                console.log($('.message-form-send-file'));
+            }
+        }
     });
 
     //アクション:スタンプダイアログの「スタンプ画像」をクリック
