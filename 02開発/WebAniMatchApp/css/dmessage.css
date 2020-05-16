@@ -50,8 +50,9 @@ footer {
     font-size:1.6rem;
 }
 
-.main-center-content-account-block {
+.main-center-content-account-block:hover {
     cursor:pointer;
+    background-color:rgb(255, 255, 0);
 }
 
 .main-center-content-account-img {
@@ -110,7 +111,7 @@ footer {
     width: auto;
     min-height: 50px;
     border-radius: 10px;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     margin: 0 auto 0 110px;
     padding: 1em;
 }
@@ -119,7 +120,7 @@ footer {
     width:90px;
     height: auto;
     vertical-align: bottom;
-    border: 2px solid #fff;
+    border: 2px solid rgb(255, 255, 255);
     border-radius: 50%;
 }
 
@@ -132,19 +133,19 @@ footer {
     height: 0;
     content: '';
     border: 10px solid transparent;
-    border-right-color: #FFFFFF;
+    border-right-color: rgb(255, 255, 255);
 }
 
 .chat-talk .talk-content-stamp img {
     width:120px;
     height: auto;
     vertical-align: bottom;
-    border: 2px solid #fff;
+    border: 2px solid rgb(255, 255, 255);
     border-radius: 50%;
 }
 
 #talk-content-file {
-    color:#2196F3;
+    color:rgb(1, 53, 250);
 }
 
 #talk-content-file:hover {
@@ -158,15 +159,15 @@ footer {
 
 .chat-talk.mytalk .talk-content {
     margin: 0 110px 0 auto;
-    color: #000;
-    background: #78FF6C;
+    color: rgb(0, 0, 0);
+    background: rgb(55, 255, 77);
 }
 
 .chat-talk.mytalk .talk-content:before {
     right: -20px;
     left: auto;
     border-color: transparent;
-    border-left-color: #78FF6C;
+    border-left-color: rgb(55, 255, 77);
 }
 
 .chat-talk.mytalk .talk-content-stamp {
