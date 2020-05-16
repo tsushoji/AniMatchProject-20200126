@@ -84,19 +84,24 @@
 
         <div class="footer-block">
 
-            <div class="message-form-block">
+            <div class="d-flex message-form-block">
 
                 <textarea class="message-form-area" rows="2" placeholder="メッセージを入力"></textarea>
 
-                <img src="../img/icon/send.png" alt="メッセージアイコン" class="align-top message-form-send-icon-send ml-2">
+                <div class="message-form-btn">
 
-                <!-- 隠しタグ -->
-                <input type="file" accept=".jpg,.jpeg,.png,.gif" class="message-form-send-file"/>
-                <img src="../img/icon/stamp.png" alt="スタンプアイコン" class="align-top message-form-send-icon-stamp">
+                    <img src="../img/icon/send.png" alt="メッセージアイコン" class="align-top message-form-send-icon-send ml-2">
 
-                <img src="../img/icon/file_form.png" alt="ファイル添付アイコン" class="align-top message-form-send-icon-file">
+                    <img src="../img/icon/stamp.png" alt="スタンプアイコン" class="align-top message-form-send-icon-stamp">
+
+                    <img src="../img/icon/file_form.png" alt="ファイル添付アイコン" class="align-top message-form-send-icon-file">
+
+                </div>
 
             </div>
+
+            <!-- 隠しタグ -->
+            <input type="file" accept=".jpg,.jpeg,.png,.gif" class="message-form-send-file"/>
 
             <!-- 隠しタグ -->
             <div class="message-form-send-stamp-area">
