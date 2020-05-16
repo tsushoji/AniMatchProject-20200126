@@ -63,15 +63,12 @@ $(document).ready(function(){
     $('.message-form-send-icon-file').click(function () {
         // ファイルダイアログを表示する
         $('.message-form-send-file').click();
-        console.log($('.message-form-send-file'));
         return false;
-
     });
 
     //アクション:「ファイル添付」タグの属性が変更された場合
     //file.name初期化で新しく作成した動的な要素に対してもイベントを発生させたいため、「on()」を使用
     $('.footer-block').on('change','.message-form-send-file',function () {
-        alert('ファイル添付1');
         // 選択されたファイル名を取得する
         if($(this)[0].files[0]){
             let fileName = $(this)[0].files[0].name;
@@ -109,7 +106,6 @@ $(document).ready(function(){
                 $('.message-form-send-file').after('<input type="file" accept=".jpg,.jpeg,.png,.gif" class="message-form-send-new-file"/>');
                 $('.message-form-send-file').remove();
                 $('.message-form-send-new-file').attr('class','message-form-send-file');
-                console.log($('.message-form-send-file'));
             }
         }
     });
