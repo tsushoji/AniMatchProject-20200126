@@ -79,7 +79,7 @@ $(document).ready(function(){
                 //添付済みファイルエリアを表示
                 $('.message-form-send-file-area').show();
                 // スクロールバーを下部に表示
-                $('html').animate({scrollTop:1000}, 10, "swing");
+                $('html').animate({scrollTop:80}, 10, "swing");
                 //添付済みファイルエリアのファイル名に添付ファイル名をセット
                 $('.message-form-send-file-area-name').text(fileName);
             }
@@ -94,7 +94,7 @@ $(document).ready(function(){
         // ダイアログの表示・非表示処理
         $('.message-form-send-stamp-area').toggle();
         // スクロールバーを下部に表示
-        $('html').animate({scrollTop:1000}, 10, "swing");
+        $('html').animate({scrollTop:470}, 10, "swing");
         // 選択されたファイル名を取得する
         if($('.message-form-send-file')[0].files[0]){
             let fileName = $('.message-form-send-file')[0].files[0].name;
