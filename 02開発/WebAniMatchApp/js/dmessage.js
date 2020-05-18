@@ -9,6 +9,17 @@ $(document).ready(function(){
     });
 
     // message.html
+    // ファンクション：トーク履歴最下部へ移動
+    const chatFrameSceollDown = function (){
+        // スクロールの速度
+        const speed = 10; // ミリ秒
+        // 移動先を数値で取得
+        console.log($('html').offset().top + parseInt($('#chat-frame').css('height')));
+        let position = $('html').offset().top + parseInt($('#chat-frame').css('height'));
+        // スムーススクロール
+        $('#chat-frame').animate({scrollTop:position}, speed, 'swing');
+    };
+
     //アクション:入力フォームの「メッセージ画像」をクリック
     $('.message-form-send-icon-send').click(function () {
         //入力フォームの内容取得
@@ -29,6 +40,8 @@ $(document).ready(function(){
             addEleMsg += '</p>';
             //タグを追加する
             $('#chat-frame').append(addEleMsg);
+            //トーク履歴最下部へ移動
+            chatFrameSceollDown();
             //入力したメッセージを初期化
             $('.message-form-area').val('');
 
@@ -48,6 +61,8 @@ $(document).ready(function(){
             addEleFile += '</p>';
             //タグを追加する
             $('#chat-frame').append(addEleFile);
+            //トーク履歴最下部へ移動
+            chatFrameSceollDown();
             //添付済みファイルエリアを非表示
             $('.message-form-send-file-area').hide();
             //「file.name」のクリア
@@ -79,7 +94,11 @@ $(document).ready(function(){
                 //添付済みファイルエリアを表示
                 $('.message-form-send-file-area').show();
                 // スクロールバーを下部に表示
-                $('html').animate({scrollTop:80}, 10, "swing");
+                // スクロールの速度
+                const speedVal = 10;
+                // 移動先を数値でセット
+                const position = 80;
+                $('html').animate({scrollTop:position}, speedVal, "swing");
                 //添付済みファイルエリアのファイル名に添付ファイル名をセット
                 $('.message-form-send-file-area-name').text(fileName);
             }
@@ -94,7 +113,11 @@ $(document).ready(function(){
         // ダイアログの表示・非表示処理
         $('.message-form-send-stamp-area').toggle();
         // スクロールバーを下部に表示
-        $('html').animate({scrollTop:470}, 10, "swing");
+        // スクロールの速度
+        const speedVal = 10;
+        // 移動先を数値でセット
+        const position = 470;
+        $('html').animate({scrollTop:position}, speedVal, "swing");
         // 選択されたファイル名を取得する
         if($('.message-form-send-file')[0].files[0]){
             let fileName = $('.message-form-send-file')[0].files[0].name;
@@ -128,6 +151,8 @@ $(document).ready(function(){
             addEleStmp += '</p>';
             //タグを追加する
             $('#chat-frame').append(addEleStmp);
+            //トーク履歴最下部へ移動
+            chatFrameSceollDown();
         }
     });
 
