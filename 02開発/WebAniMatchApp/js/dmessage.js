@@ -27,15 +27,16 @@ $(document).ready(function(){
         let inputMsg = $('.message-form-area').val().replace(/\r?\n/g,"<br/>");
         //添付したファイルオブジェクトを取得
         let inputFile = $('.message-form-send-file')[0].files[0];
+        const sendMsgNotRead = "未読"
         //上記で取得した値が空白の場合、メッセージを出力しない
         if(inputMsg){
             //追加するタグを「addEleMsg」にセット
             let addEleMsg = '<p class="chat-talk mytalk">';
-            addEleMsg += '<span class="talk-icon">';
-            addEleMsg += '<img src="../img/dmessage/sample_20200501.jpg" alt="相手アカウント画像"/>';
-            addEleMsg += '</span>';
             addEleMsg += '<span class="talk-content">';
             addEleMsg += inputMsg;
+            addEleMsg += '</span>';
+            addEleMsg += '<span class="talk-date">';
+            addEleMsg += sendMsgNotRead;
             addEleMsg += '</span>';
             addEleMsg += '</p>';
             //タグを追加する
@@ -52,11 +53,11 @@ $(document).ready(function(){
             let inputFileName = inputFile.name;
             //追加するタグを「addEleFile」にセット
             let addEleFile = '<p class="chat-talk mytalk">';
-            addEleFile += '<span class="talk-icon">';
-            addEleFile += '<img src="../img/dmessage/sample_20200501.jpg" alt="相手アカウント画像"/>';
-            addEleFile += '</span>';
             addEleFile += '<span class="talk-content" id="talk-content-file">';
             addEleFile += inputFileName;
+            addEleFile += '</span>';
+            addEleFile += '<span class="talk-date">';
+            addEleFile += sendMsgNotRead;
             addEleFile += '</span>';
             addEleFile += '</p>';
             //タグを追加する
@@ -139,14 +140,15 @@ $(document).ready(function(){
         let inputStmpUrl = $('.message-form-send-stamp-area-img').attr('src');
         //追加するタグを「addEleFile」にセット
         if(inputStmpUrl){
+            const sendMsgNotRead = "未読"
             let addEleStmp = '<p class="chat-talk mytalk">';
-            addEleStmp += '<span class="talk-icon">';
-            addEleStmp += '<img src="../img/dmessage/sample_20200501.jpg" alt="相手アカウント画像"/>';
-            addEleStmp += '</span>';
             addEleStmp += '<span class="talk-content-stamp">';
             addEleStmp += '<img src="';
             addEleStmp += inputStmpUrl;
             addEleStmp += '" alt="スタンプ絵文字" class="message-form-send-icon-stamp-dialog-img">';
+            addEleStmp += '</span>';
+            addEleStmp += '<span class="talk-date">';
+            addEleStmp += sendMsgNotRead;
             addEleStmp += '</span>';
             addEleStmp += '</p>';
             //タグを追加する

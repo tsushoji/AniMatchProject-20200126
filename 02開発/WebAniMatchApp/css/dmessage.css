@@ -81,7 +81,7 @@ footer {
 
 #chat-frame {
     min-width: 320px;
-    max-width: 800px;
+    max-width: 750px;
     margin: auto;
     padding: 1em 2em;
     height:calc(100vh - 170px);
@@ -112,8 +112,25 @@ footer {
     min-height: 50px;
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
-    margin: 0 auto 0 110px;
+    margin: 0 auto 0 10px;
     padding: 1em;
+    float: left;
+}
+
+.chat-talk .talk-content-stamp {
+    position: relative;
+    box-sizing: border-box;
+    margin: 0 auto 0 10px;
+    padding: 1em;
+    float: left;
+}
+
+.chat-talk .talk-date {
+    position:relative;
+    display: block;
+    width: 30px;
+    margin: 5px auto 0 10px;
+    float:left;
 }
 
 .chat-talk .talk-icon img {
@@ -141,7 +158,6 @@ footer {
     height: auto;
     vertical-align: bottom;
     border: 2px solid rgb(255, 255, 255);
-    border-radius: 50%;
 }
 
 #talk-content-file {
@@ -153,14 +169,22 @@ footer {
     cursor:pointer;
 }
 
-.chat-talk.mytalk .talk-icon {
+.chat-talk.mytalk .talk-content {
+    margin: 0 10px 0 auto;
+    color: rgb(0, 0, 0);
+    background: rgb(55, 255, 77);
     float: right;
 }
 
-.chat-talk.mytalk .talk-content {
-    margin: 0 110px 0 auto;
+.chat-talk.mytalk .talk-content-stamp {
+    margin: 0 10px 0 auto;
     color: rgb(0, 0, 0);
-    background: rgb(55, 255, 77);
+    float:right;
+}
+
+.chat-talk.mytalk .talk-date {
+    margin: 5px 10px 0 auto;
+    float:right;
 }
 
 .chat-talk.mytalk .talk-content:before {
@@ -170,14 +194,10 @@ footer {
     border-left-color: rgb(55, 255, 77);
 }
 
-.chat-talk.mytalk .talk-content-stamp {
-    float: right;
-}
-
 /* フッター */
 .message-form-block,.message-form-send-stamp-area,.message-form-send-file-area {
     min-width: 320px;
-    max-width: 800px;
+    max-width: 750px;
     margin: auto;
     padding: 1em 2em;
 }
