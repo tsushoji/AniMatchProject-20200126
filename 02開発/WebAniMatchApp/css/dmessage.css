@@ -210,7 +210,7 @@ footer {
     min-width:110px;
 }
 
-.message-form-send-icon-send:hover,.message-form-send-icon-stamp:hover,.message-form-send-icon-file:hover {
+.message-form-send-icon-send:hover,.message-form-send-icon-stamp:hover,.message-form-send-icon-file:hover,.message-form-send-file-area-icon-close:hover {
     cursor:pointer;
     background-color:rgb(255, 255, 0);
 }
