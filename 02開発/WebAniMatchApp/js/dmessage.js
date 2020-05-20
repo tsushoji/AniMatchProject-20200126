@@ -48,27 +48,36 @@ $(document).ready(function(){
         }
 
         if(inputFile){
-            //添付したファイル名を取得
-            let inputFileName = inputFile.name;
-            //追加するタグを「addEleFile」にセット
-            let addEleFile = '<p class="chat-talk mytalk">';
-            addEleFile += '<span class="talk-content" id="talk-content-file">';
-            addEleFile += inputFileName;
-            addEleFile += '</span>';
-            addEleFile += '<span class="talk-date">';
-            addEleFile += sendMsgNotRead;
-            addEleFile += '</span>';
-            addEleFile += '</p>';
-            //タグを追加する
-            $('#chat-frame').append(addEleFile);
-            //トーク履歴最下部へ移動
-            chatFrameSceollDown();
-            //添付済みファイルエリアを非表示
-            $('.message-form-send-file-area').hide();
-            //「file.name」のクリア
-            $('.message-form-send-file').after('<input type="file" accept=".jpg,.jpeg,.png,.gif" class="message-form-send-new-file"/>');
-            $('.message-form-send-file').remove();
-            $('.message-form-send-new-file').attr('class','message-form-send-file');
+            const fileReader = new FileReader();
+            //読み込み処理が終了した場合
+            fileReader.onloadend = function() {
+                let addEleFile = '<p class="chat-talk mytalk">';
+                addEleFile += '<span class="talk-content-file">';
+                addEleFile += '<a href="';
+                addEleFile += fileReader.result;
+                addEleFile += '" target="_blank">';
+                addEleFile += '<img src="';
+                addEleFile += fileReader.result;
+                addEleFile += '" alt="スタンプ絵文字">';
+                addEleFile += '</a>';
+                addEleFile += '</span>';
+                addEleFile += '<span class="talk-date">';
+                addEleFile += sendMsgNotRead;
+                addEleFile += '</span>';
+                addEleFile += '</p>';
+                //タグを追加する
+                $('#chat-frame').append(addEleFile);
+                //トーク履歴最下部へ移動
+                chatFrameSceollDown();
+                //添付済みファイルエリアを非表示
+                $('.message-form-send-file-area').hide();
+                //「file.name」のクリア
+                $('.message-form-send-file').after('<input type="file" accept=".jpg,.jpeg,.png,.gif" class="message-form-send-new-file"/>');
+                $('.message-form-send-file').remove();
+                $('.message-form-send-new-file').attr('class','message-form-send-file');
+            }
+            //Fileオブジェクトを読み込む
+            fileReader.readAsDataURL(inputFile);
         }
 
 
@@ -142,7 +151,7 @@ $(document).ready(function(){
             addEleStmp += '<span class="talk-content-stamp">';
             addEleStmp += '<img src="';
             addEleStmp += inputStmpUrl;
-            addEleStmp += '" alt="スタンプ絵文字" class="message-form-send-icon-stamp-dialog-img">';
+            addEleStmp += '" alt="スタンプ絵文字">';
             addEleStmp += '</span>';
             addEleStmp += '<span class="talk-date">';
             addEleStmp += sendMsgNotRead;

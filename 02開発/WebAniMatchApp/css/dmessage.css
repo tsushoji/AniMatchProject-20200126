@@ -160,6 +160,14 @@ footer {
     border: 2px solid rgb(255, 255, 255);
 }
 
+.chat-talk .talk-content-file img {
+    width:230px;
+    height: auto;
+    vertical-align: bottom;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 30%;
+}
+
 #talk-content-file {
     color:rgb(1, 53, 250);
 }
@@ -177,6 +185,12 @@ footer {
 }
 
 .chat-talk.mytalk .talk-content-stamp {
+    margin: 0 10px 0 auto;
+    color: rgb(0, 0, 0);
+    float:right;
+}
+
+.chat-talk.mytalk .talk-content-file {
     margin: 0 10px 0 auto;
     color: rgb(0, 0, 0);
     float:right;
