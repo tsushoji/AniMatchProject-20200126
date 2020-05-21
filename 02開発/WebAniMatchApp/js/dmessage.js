@@ -53,17 +53,24 @@ $(document).ready(function(){
             fileReader.onloadend = function() {
                 let addEleFile = '<p class="chat-talk mytalk">';
                 addEleFile += '<span class="talk-content-file">';
-                addEleFile += '<a href="';
-                addEleFile += fileReader.result;
-                addEleFile += '" target="_blank">';
                 addEleFile += '<img src="';
                 addEleFile += fileReader.result;
-                addEleFile += '" alt="スタンプ絵文字">';
-                addEleFile += '</a>';
+                addEleFile += '" alt="スタンプ絵文字" class="img-responsive thumbnail" data-toggle="modal" data-target="#image_Modal">';
                 addEleFile += '</span>';
                 addEleFile += '<span class="talk-date">';
                 addEleFile += sendMsgNotRead;
                 addEleFile += '</span>';
+                addEleFile += '<div class="modal fade" id="image_Modal" role="dialog">';
+                addEleFile += '<div class="modal-dialog modal-xl">';
+                addEleFile += '<div class="modal-content">';
+                addEleFile += '<div class="modal-body">';
+                addEleFile += '<img src="';
+                addEleFile += fileReader.result;
+                addEleFile += '" alt="スタンプ絵文字" class="modal-body-img">';
+                addEleFile += '</div>';
+                addEleFile += '</div>';
+                addEleFile += '</div>';
+                addEleFile += '</div>';
                 addEleFile += '</p>';
                 //タグを追加する
                 $('#chat-frame').append(addEleFile);
