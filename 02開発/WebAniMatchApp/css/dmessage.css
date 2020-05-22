@@ -79,12 +79,16 @@ footer {
     background: rgba(100,100,100, .5);
 }
 
+.chat-header-content {
+    background:linear-gradient(transparent 50%, yellow 50%);
+}
+
 #chat-frame {
     min-width: 320px;
     max-width: 750px;
     margin: auto;
     padding: 1em 2em;
-    height:calc(100vh - 170px);
+    height:calc(100vh - 230px);
     overflow-y: auto;
 }
 
